@@ -1,10 +1,13 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Project from "../components/Project.astro";
 
 const pageTitle = "Projects";
-
 ---
 
 <MainLayout pageTitle={pageTitle}>
-  <h2>openIMIS</h2>
+  <Project projectName="openIMIS"></Project>
+  <Project projectName="openIMIS2.0"></Project>
+  <Project projectName="Calendar"></Project>
+  <Project projectName="Time Series"></Project>
 </MainLayout>

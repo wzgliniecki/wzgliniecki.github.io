@@ -1,10 +1,25 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Skill from "../components/Skill.astro";
+import Divider from "../components/Divider.astro";
 
 const pageTitle = "Skills";
-
 ---
 
 <MainLayout pageTitle={pageTitle}>
-  <h2>Frontend skills</h2>
+  <Divider dividerName="Backend"></Divider>
+  <Skill skillName="openIMIS"></Skill>
+  <Skill skillName="openIMIS2.0"></Skill>
+  <Skill skillName="Calendar"></Skill>
+  <Skill skillName="Time Series"></Skill>
+  <Divider dividerName="Frontend"></Divider>
+  <Skill skillName="openIMIS"></Skill>
+  <Skill skillName="openIMIS2.0"></Skill>
+  <Skill skillName="Calendar"></Skill>
+  <Skill skillName="Time Series"></Skill>
+  <Divider dividerName="Other"></Divider>
+  <Skill skillName="openIMIS"></Skill>
+  <Skill skillName="openIMIS2.0"></Skill>
+  <Skill skillName="Calendar"></Skill>
+  <Skill skillName="Time Series"></Skill>
 </MainLayout>
