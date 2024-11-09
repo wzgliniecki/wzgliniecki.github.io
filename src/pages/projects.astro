@@ -4,7 +4,6 @@ import Project from "../components/Project.astro";
 
 const pageTitle = "Projects";
 const allProjects = await Astro.glob("../pages/projects/*.md");
-// const allProjects = Object.values(await import.meta.glob('../pages/projects/*.md', { eager: true }));
 ---
 
 <MainLayout pageTitle={pageTitle}>
