@@ -1,11 +1,10 @@
 ---
 import DevelopmentWarning from "../components/DevelopmentWarning.astro";
 import Header from "../components/Header.astro";
-import "../styles/global.css";
 const { pageTitle } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" class="bg-gray-50 text-gray-900">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
@@ -36,10 +35,18 @@ const { pageTitle } = Astro.props;
     </script>
     <title>{pageTitle}</title>
   </head>
-  <body>
-    <Header />
-    <h1>{pageTitle}</h1>
-    <slot></slot>
+  <body class="min-h-screen bg-white text-gray-900 dark:bg-gray-800 dark:text-white transition-colors duration-300">
+    <header class="bg-gray-200 dark:bg-gray-700 shadow-md">
+      <div class="max-w-7xl mx-auto px-4 py-4">
+        <Header />
+      </div>
+    </header>
+
+    <main class="px-4 py-8 max-w-7xl mx-auto">
+      <h1 class="text-3xl font-semibold text-center">{pageTitle}</h1>
+      <slot></slot>
+    </main>
+
     <DevelopmentWarning />
   </body>
 </html>
