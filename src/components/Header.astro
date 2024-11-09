@@ -1,11 +1,19 @@
 ---
-import NavigationBar from "./NavigationBar.astro";
-import ModeButton from "./ModeButton.astro"
+
 ---
 
 <header>
   <nav>
-    <NavigationBar />
-    <ModeButton />
+    <div class="flex flex-row flex-no-wrap navigation h-20">
+      <a href="/">Home</a>
+      <a href="/skills/">Skills</a>
+      <a href="/projects/">Projects</a>
+      <a href="https://pl.linkedin.com/in/wojciech-zgliniecki-1279a1166">LinkedIn</a>
+      <a href="https://github.com/wzgliniecki/">Github</a>
+      <button type="button" id="theme-selector" class="max-h-full flex-shrink">
+        <img class="hidden max-h-full dark:inline" src="/icons/sun.png" />
+        <img class="max-h-full dark:hidden" src="/icons/moon.png" />
+      </button>
+  </div>
   </nav>
 </header>
