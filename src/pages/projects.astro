@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Project from "../components/Project.astro";
+import ProjectCard from "../components/Project.astro";
 
 const pageTitle = "Projects";
 const allProjects = await Astro.glob("../pages/projects/*.md");
@@ -8,6 +8,6 @@ const allProjects = await Astro.glob("../pages/projects/*.md");
 
 <MainLayout pageTitle={pageTitle}>
   <ul>
-    {allProjects.map((project) => <Project projectTitle={project.frontmatter.projectTitle ?? "Test"} />)}
+    {allProjects.map((project) => <ProjectCard projectTitle={project.frontmatter.projectTitle} />)}
   </ul>
 </MainLayout>

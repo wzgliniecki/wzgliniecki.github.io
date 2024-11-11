@@ -1,25 +1,30 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Skill from "../components/Skill.astro";
+import SkillCard from "../components/SkillCard.astro";
 import Divider from "../components/Divider.astro";
 
 const pageTitle = "Skills";
+const allSkills = await Astro.glob("../pages/skills/*.md");
+const stackTypes = ["backend", "frontend", "other"];
 ---
 
 <MainLayout pageTitle={pageTitle}>
   <Divider dividerName="Backend"></Divider>
-  <Skill skillName="openIMIS"></Skill>
-  <Skill skillName="openIMIS2.0"></Skill>
-  <Skill skillName="Calendar"></Skill>
-  <Skill skillName="Time Series"></Skill>
+    <ul>
+      {allSkills
+        .filter(skill => skill.frontmatter.stackPart === "backend")
+        .map((skill) => <SkillCard key={skill.frontmatter.skillTitle} projectTitle={skill.frontmatter.skillTitle} />)}
+    </ul>
   <Divider dividerName="Frontend"></Divider>
-  <Skill skillName="openIMIS"></Skill>
-  <Skill skillName="openIMIS2.0"></Skill>
-  <Skill skillName="Calendar"></Skill>
-  <Skill skillName="Time Series"></Skill>
+  <ul>
+    {allSkills
+      .filter(skill => skill.frontmatter.stackPart === "frontend")
+      .map((skill) => <SkillCard key={skill.frontmatter.skillTitle} projectTitle={skill.frontmatter.skillTitle} />)}
+  </ul>
   <Divider dividerName="Other"></Divider>
-  <Skill skillName="openIMIS"></Skill>
-  <Skill skillName="openIMIS2.0"></Skill>
-  <Skill skillName="Calendar"></Skill>
-  <Skill skillName="Time Series"></Skill>
+  <ul>
+    {allSkills
+      .filter(skill => skill.frontmatter.stackPart === "other")
+      .map((skill) => <SkillCard key={skill.frontmatter.skillTitle} projectTitle={skill.frontmatter.skillTitle} />)}
+  </ul>
 </MainLayout>
