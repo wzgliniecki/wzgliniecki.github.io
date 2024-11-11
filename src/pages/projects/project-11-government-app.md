@@ -5,6 +5,7 @@ projectLogo: null
 repositoryLinks: null
 isPrivate: true
 isWorkInProgress: true
+layout: ../../layouts/MainLayout.astro
 ---
 
 Government app

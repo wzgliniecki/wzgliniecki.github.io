@@ -5,6 +5,7 @@ projectLogo: null
 repositoryLinks: null
 isPrivate: true
 isWorkInProgress: true
+layout: ../../layouts/MainLayout.astro
 ---
 
 Machine Learning portal used in my own projects. Website to manage datasets and models and publish them.
