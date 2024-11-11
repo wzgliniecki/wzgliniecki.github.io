@@ -1,7 +1,7 @@
 ---
 projectTitle: "openIMIS"
 technologiesList: ["python", "javascript", "react", "django"]
-projectLogo: images/project_logos/openimis.svg
+projectLogo: "openimis.svg"
 repositoryLinks: ["https://github.com/openimis"]
 isPrivate: false
 isWorkInProgress: false
