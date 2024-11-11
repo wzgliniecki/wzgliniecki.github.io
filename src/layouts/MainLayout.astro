@@ -1,11 +1,11 @@
----
+--- 
 import DevelopmentWarning from "../components/DevelopmentWarning.astro";
 import Header from "../components/Header.astro";
 const { pageTitle } = Astro.props;
 import { ViewTransitions } from 'astro:transitions';
 ---
 
-<html lang="en" class="bg-gray-50 text-gray-900">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
@@ -37,18 +37,15 @@ import { ViewTransitions } from 'astro:transitions';
     </script>
     <title>{pageTitle}</title>
   </head>
-  <body class="min-h-screen bg-white text-gray-900 dark:bg-gray-800 dark:text-white transition-colors duration-300">
-    <header class="bg-gray-200 dark:bg-gray-700 shadow-md">
-      <div class="max-w-7xl mx-auto px-4 py-4">
-        <Header />
+  
+  <body class="bg-white text-black dark:bg-gray-900 dark:text-white transition-all duration-300">
+    <Header />
+    <main class="max-w-7xl mx-auto px-6 py-12">
+      <h1 class="text-3xl font-extrabold text-center text-primary dark:text-primary-light mb-6">{pageTitle}</h1>
+      <div class="prose max-w-full text-gray-700 dark:text-gray-300">
+        <slot></slot>
       </div>
-    </header>
-
-    <main class="px-4 py-8 max-w-7xl mx-auto">
-      <h1 class="text-3xl font-semibold text-center">{pageTitle}</h1>
-      <slot></slot>
     </main>
-
     <DevelopmentWarning />
   </body>
 </html>

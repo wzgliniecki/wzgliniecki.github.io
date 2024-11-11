@@ -2,16 +2,34 @@
 
 ---
 
-<header>
-  <nav>
-    <div class="flex flex-row flex-no-wrap navigation h-20">
-      <a href="/">Home</a>
-      <a href="/skills/">Skills</a>
-      <a href="/projects/">Projects</a>
-      <button type="button" id="theme-selector" class="max-h-full flex-shrink">
-        <img class="hidden max-h-full dark:inline" src="/icons/sun.png" />
-        <img class="max-h-full dark:hidden" src="/icons/moon.png" />
-      </button>
-  </div>
+<header class="bg-white dark:bg-gray-900 shadow-md">
+  <nav class="flex items-center justify-between h-20 px-6">
+    <div class="text-xl font-semibold text-gray-900 dark:text-white">
+      <a href="/">Wojciech Zgliniecki</a>
+    </div>
+
+    <div class="flex space-x-6 text-gray-900 dark:text-white">
+      <a href="/" class="hover:text-primary dark:hover:text-primary-light">Home</a>
+      <a href="/skills/" class="hover:text-primary dark:hover:text-primary-light">Skills</a>
+      <a href="/projects/" class="hover:text-primary dark:hover:text-primary-light">Projects</a>
+    </div>
+
+    <button
+      type="button"
+      id="theme-selector"
+      class="flex items-center justify-center p-2 rounded-lg focus:outline-none"
+      aria-label="Toggle Theme"
+    >
+      <img
+        class="hidden dark:inline h-6 w-6"
+        src="/icons/sun.png"
+        alt="Sun Icon"
+      />
+      <img
+        class="h-6 w-6 dark:hidden"
+        src="/icons/moon.png"
+        alt="Moon Icon"
+      />
+    </button>
   </nav>
 </header>
