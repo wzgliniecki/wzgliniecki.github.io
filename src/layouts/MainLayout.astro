@@ -12,29 +12,6 @@ import { ViewTransitions } from 'astro:transitions';
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <ViewTransitions />
-    <script>
-      if (
-        localStorage.theme === 'light' ||
-        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)
-      ) {
-        document.documentElement.classList.add('light');
-      } else {
-        document.documentElement.classList.remove('light');
-      }
-    </script>
-    <script>
-      document.getElementById("theme-selector")?.addEventListener("click", () => {
-        if (localStorage.theme === "dark") {
-          localStorage.theme = "light";
-          document.documentElement.classList.remove("dark");
-          document.documentElement.classList.add("light");
-        } else {
-          localStorage.theme = "dark";
-          document.documentElement.classList.remove("light");
-          document.documentElement.classList.add("dark");
-        }
-      });
-    </script>
     <title>{pageTitle}</title>
   </head>
   

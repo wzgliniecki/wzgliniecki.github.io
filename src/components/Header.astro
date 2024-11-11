@@ -33,3 +33,30 @@
     </button>
   </nav>
 </header>
+
+<script is:inline>
+  if (
+    localStorage.theme === 'light' ||
+    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)
+  ) {
+    document.documentElement.classList.add('light');
+  } else {
+    document.documentElement.classList.remove('light');
+  }
+
+  document.getElementById("theme-selector")?.addEventListener("click", () => {
+    if (localStorage.theme === "dark") {
+      localStorage.theme = "light";
+      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light");
+    } else {
+      localStorage.theme = "dark";
+      document.documentElement.classList.remove("light");
+      document.documentElement.classList.add("dark");
+    }
+  });
+  document.addEventListener('astro:after-swap', function () {
+    if (localStorage.getItem(STORAGE_KEY) === 'dark')
+    document.documentElement.classList.toggle('dark', true);
+  }); 
+</script>
