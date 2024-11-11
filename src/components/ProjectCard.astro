@@ -2,10 +2,9 @@
 const { projectTitle, projectLogo, isPrivate, isWorkInProgress, repositoryLinks, projectSlug  } = Astro.props;
 ---
 
-
 <div class="bg-white dark:bg-gray-800 dark:text-white shadow-lg rounded-lg p-6 text-center space-y-4">
   <a href={`/projects/${projectSlug}`} class="block">
-    <img src={`/images/project_logos/${projectLogo}`} alt={projectTitle} class="mx-auto h-32 w-auto object-contain" />
+    <img src={`/images/project_logos/${projectLogo ?? "placeholder.svg"}`} alt={projectTitle} class="mx-auto h-32 w-auto object-contain" />
   </a>
   <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">{projectTitle}</h2>
   {repositoryLinks && (
