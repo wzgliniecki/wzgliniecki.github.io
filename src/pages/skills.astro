@@ -9,22 +9,43 @@ const stackTypes = ["backend", "frontend", "other"];
 ---
 
 <MainLayout pageTitle={pageTitle}>
-  <Divider dividerName="Backend"></Divider>
-    <ul>
-      {allSkills
-        .filter(skill => skill.frontmatter.stackPart === "backend")
-        .map((skill) => <SkillCard key={skill.frontmatter.skillTitle} projectTitle={skill.frontmatter.skillTitle} />)}
-    </ul>
-  <Divider dividerName="Frontend"></Divider>
+  <Divider dividerName="Backend" />
   <ul>
-    {allSkills
-      .filter(skill => skill.frontmatter.stackPart === "frontend")
-      .map((skill) => <SkillCard key={skill.frontmatter.skillTitle} projectTitle={skill.frontmatter.skillTitle} />)}
+    {
+      allSkills
+        .filter((skill) => skill.frontmatter.stackPart === "backend")
+        .map((skill) => (
+          <SkillCard
+            key={skill.frontmatter.skillTitle}
+            projectTitle={skill.frontmatter.skillTitle}
+          />
+        ))
+    }
   </ul>
-  <Divider dividerName="Other"></Divider>
+  <Divider dividerName="Frontend" />
   <ul>
-    {allSkills
-      .filter(skill => skill.frontmatter.stackPart === "other")
-      .map((skill) => <SkillCard key={skill.frontmatter.skillTitle} projectTitle={skill.frontmatter.skillTitle} />)}
+    {
+      allSkills
+        .filter((skill) => skill.frontmatter.stackPart === "frontend")
+        .map((skill) => (
+          <SkillCard
+            key={skill.frontmatter.skillTitle}
+            projectTitle={skill.frontmatter.skillTitle}
+          />
+        ))
+    }
+  </ul>
+  <Divider dividerName="Other" />
+  <ul>
+    {
+      allSkills
+        .filter((skill) => skill.frontmatter.stackPart === "other")
+        .map((skill) => (
+          <SkillCard
+            key={skill.frontmatter.skillTitle}
+            projectTitle={skill.frontmatter.skillTitle}
+          />
+        ))
+    }
   </ul>
 </MainLayout>

@@ -2,7 +2,7 @@
 projectTitle: "browser"
 technologiesList: ["python"]
 projectLogo: null
-repositoryLinks:  null
+repositoryLinks: null
 isPrivate: false
 isWorkInProgress: true
 ---

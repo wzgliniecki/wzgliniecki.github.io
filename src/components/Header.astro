@@ -9,9 +9,17 @@
     </div>
 
     <div class="flex space-x-6 text-gray-900 dark:text-white">
-      <a href="/" class="hover:text-primary dark:hover:text-primary-light">Home</a>
-      <a href="/skills/" class="hover:text-primary dark:hover:text-primary-light">Skills</a>
-      <a href="/projects/" class="hover:text-primary dark:hover:text-primary-light">Projects</a>
+      <a href="/" class="hover:text-primary dark:hover:text-primary-light"
+        >Home</a
+      >
+      <a
+        href="/skills/"
+        class="hover:text-primary dark:hover:text-primary-light">Skills</a
+      >
+      <a
+        href="/projects/"
+        class="hover:text-primary dark:hover:text-primary-light">Projects</a
+      >
     </div>
 
     <button
@@ -25,23 +33,20 @@
         src="/icons/sun.png"
         alt="Sun Icon"
       />
-      <img
-        class="h-6 w-6 dark:hidden"
-        src="/icons/moon.png"
-        alt="Moon Icon"
-      />
+      <img class="h-6 w-6 dark:hidden" src="/icons/moon.png" alt="Moon Icon" />
     </button>
   </nav>
 </header>
 
 <script is:inline>
   if (
-    localStorage.theme === 'light' ||
-    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)
+    localStorage.theme === "light" ||
+    (!("theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: light)").matches)
   ) {
-    document.documentElement.classList.add('light');
+    document.documentElement.classList.add("light");
   } else {
-    document.documentElement.classList.remove('light');
+    document.documentElement.classList.remove("light");
   }
 
   document.getElementById("theme-selector")?.addEventListener("click", () => {
@@ -55,8 +60,8 @@
       document.documentElement.classList.add("dark");
     }
   });
-  document.addEventListener('astro:after-swap', function () {
-    if (localStorage.getItem(STORAGE_KEY) === 'dark')
-    document.documentElement.classList.toggle('dark', true);
-  }); 
+  document.addEventListener("astro:after-swap", function () {
+    if (localStorage.getItem(STORAGE_KEY) === "dark")
+      document.documentElement.classList.toggle("dark", true);
+  });
 </script>

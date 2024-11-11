@@ -2,7 +2,7 @@
 projectTitle: "Babel calendar"
 technologiesList: ["typescript", "react", "vue"]
 projectLogo: null
-repositoryLinks:  ["https://github.com/wzgliniecki/wzgliniecki.github.io"]
+repositoryLinks: ["https://github.com/wzgliniecki/wzgliniecki.github.io"]
 isPrivate: true
 isWorkInProgress: true
 ---
