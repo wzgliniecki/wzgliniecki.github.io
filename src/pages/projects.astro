@@ -8,14 +8,18 @@ const allProjects = await Astro.glob("../pages/projects/*.md");
 
 <MainLayout pageTitle={pageTitle}>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      {
-        allProjects.map((project) => (
+    {
+      allProjects.map((project) => {
+        const projectSlug = project.url.split('/').pop().replace('.md', '');
+        return (
           <ProjectCard 
             projectTitle={project.frontmatter.projectTitle} 
             projectLogo={project.frontmatter.projectLogo} 
             repositoryLinks={project.frontmatter.repositoryLinks} 
+            projectSlug={projectSlug}
           />
-        ))
-      } 
-    </div>
+        );
+      })
+    } 
+  </div>
 </MainLayout>

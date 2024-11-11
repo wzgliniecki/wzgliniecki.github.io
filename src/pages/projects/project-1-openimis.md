@@ -5,6 +5,7 @@ projectLogo: "openimis.svg"
 repositoryLinks: ["https://github.com/openimis"]
 isPrivate: false
 isWorkInProgress: false
+layout: ../../layouts/MainLayout.astro
 ---
 
 openIMIS (Open Insurance Management Information System) is an innovative, open-source solution designed to enhance the management of health insurance schemes, particularly in low- and middle-income countries. The project aims to improve the efficiency, transparency, and accessibility of health financing through a comprehensive digital platform.

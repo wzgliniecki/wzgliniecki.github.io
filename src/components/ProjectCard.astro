@@ -1,10 +1,12 @@
 ---
-const { projectTitle, projectLogo, isPrivate, isWorkInProgress, repositoryLinks  } = Astro.props;
+const { projectTitle, projectLogo, isPrivate, isWorkInProgress, repositoryLinks, projectSlug  } = Astro.props;
 ---
 
 
 <div class="bg-white dark:bg-gray-800 dark:text-white shadow-lg rounded-lg p-6 text-center space-y-4">
-  <img src={`/images/project_logos/${projectLogo}`} alt={projectTitle} class="mx-auto h-32 w-auto object-contain" />
+  <a href={`/projects/${projectSlug}`} class="block">
+    <img src={`/images/project_logos/${projectLogo}`} alt={projectTitle} class="mx-auto h-32 w-auto object-contain" />
+  </a>
   <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">{projectTitle}</h2>
   {repositoryLinks && (
     <a href={repositoryLinks} target="_blank" class="text-indigo-600 hover:underline dark:text-indigo-400">
