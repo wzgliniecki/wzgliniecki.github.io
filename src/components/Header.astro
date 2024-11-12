@@ -1,5 +1,5 @@
 ---
-
+import { MoonStar, Sun } from "lucide-astro";
 ---
 
 <header class="bg-white dark:bg-gray-900 shadow-md">
@@ -28,12 +28,8 @@
       class="flex items-center justify-center p-2 rounded-lg focus:outline-none"
       aria-label="Toggle Theme"
     >
-      <img
-        class="hidden dark:inline h-6 w-6"
-        src="/icons/sun.png"
-        alt="Sun Icon"
-      />
-      <img class="h-6 w-6 dark:hidden" src="/icons/moon.png" alt="Moon Icon" />
+      <MoonStar class="h-6 w-6 dark:hidden" />
+      <Sun class="hidden dark:inline h-6 w-6" />
     </button>
   </nav>
 </header>
