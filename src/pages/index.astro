@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { Linkedin, Github } from "lucide-astro";
 const pageTitle = "Wojciech Zgliniecki";
+import SkillPanel from "../components/SkillPanel.astro";
 ---
 
 <MainLayout pageTitle={pageTitle}>
@@ -13,4 +14,8 @@ const pageTitle = "Wojciech Zgliniecki";
     >
     <a href="https://github.com/wzgliniecki/"><Github /></a>
   </div>
+
+  <SkillPanel skillType="backend" />
+  <SkillPanel skillType="frontend" />
+  <SkillPanel skillType="other" />
 </MainLayout>
