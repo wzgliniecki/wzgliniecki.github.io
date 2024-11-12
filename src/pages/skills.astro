@@ -1,54 +1,11 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import SkillCard from "../components/SkillCard.astro";
-import Divider from "../components/Divider.astro";
-
+import SkillPanel from "../components/SkillPanel.astro";
 const pageTitle = "Skills";
-const allSkills = await Astro.glob("../pages/skills/*.md");
-const stackTypes = ["backend", "frontend", "other"];
 ---
 
 <MainLayout pageTitle={pageTitle}>
-  <Divider dividerName="Backend" />
-  <ul>
-    {
-      allSkills
-        .filter((skill) => skill.frontmatter.stackPart === "backend")
-        .map((skill) => (
-          <SkillCard
-            key={skill.frontmatter.skillTitle}
-            skillTitle={skill.frontmatter.skillTitle}
-            iconName={skill.frontmatter.iconName}
-          />
-        ))
-    }
-  </ul>
-  <Divider dividerName="Frontend" />
-  <ul>
-    {
-      allSkills
-        .filter((skill) => skill.frontmatter.stackPart === "frontend")
-        .map((skill) => (
-          <SkillCard
-            key={skill.frontmatter.skillTitle}
-            skillTitle={skill.frontmatter.skillTitle}
-            iconName={skill.frontmatter.iconName}
-          />
-        ))
-    }
-  </ul>
-  <Divider dividerName="Other" />
-  <ul>
-    {
-      allSkills
-        .filter((skill) => skill.frontmatter.stackPart === "other")
-        .map((skill) => (
-          <SkillCard
-            key={skill.frontmatter.skillTitle}
-            skillTitle={skill.frontmatter.skillTitle}
-            iconName={skill.frontmatter.iconName}
-          />
-        ))
-    }
-  </ul>
+  <SkillPanel skillType="backend" />
+  <SkillPanel skillType="frontend" />
+  <SkillPanel skillType="other" />
 </MainLayout>

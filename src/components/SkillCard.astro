@@ -4,7 +4,6 @@ import { Icon } from "astro-icon/components";
 import { ICON_SET } from "../constants.js";
 ---
 
-<div>
-  <h2>{skillName}</h2>
-  <Icon name=`${ICON_SET}:${iconName}` />
+<div "bg-white dark:bg-gray-800 dark:text-white shadow-lg rounded-lg p-6 text-center space-y-4">
+  <Icon name=`${ICON_SET}:${iconName}` class="text-6xl"/>
 </div>
