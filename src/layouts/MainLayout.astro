@@ -19,8 +19,14 @@ import { ViewTransitions } from "astro:transitions";
   <body
     class="bg-white text-black dark:bg-gray-900 dark:text-white transition-all duration-300"
   >
+    <a
+      href="#main"
+      class="skip-nav-link absolute left-2 transform -translate-y-[140%] bg-blue-500 px-8 py-2.5 transition-transform duration-325 ease-in focus:-translate-y-0.5"
+    >
+      Skip to main content
+    </a>
     <Header />
-    <main class="max-w-7xl mx-auto px-6 py-12">
+    <main id="main" class="max-w-7xl mx-auto px-6 py-12">
       <h1
         class="text-3xl font-extrabold text-center text-primary dark:text-primary-light mb-6"
       >
