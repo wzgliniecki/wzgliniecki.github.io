@@ -1,7 +1,10 @@
 ---
-const { projectTitle } = Astro.props;
+const { skillName, iconName } = Astro.props;
+import { Icon } from "astro-icon/components";
+import { ICON_SET } from "../constants.js";
 ---
 
 <div>
-  <h2>{projectTitle}</h2>
+  <h2>{skillName}</h2>
+  <Icon name=`${ICON_SET}:${iconName}` />
 </div>
