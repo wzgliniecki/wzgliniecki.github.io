@@ -6,7 +6,7 @@ const {
   isWorkInProgress,
   repositoryLinks,
   projectSlug,
-  technologiesList
+  technologiesList,
 } = Astro.props;
 import { Github } from "lucide-astro";
 import TechnologiesBar from "./TechnologiesBar.astro";
@@ -25,13 +25,18 @@ import TechnologiesBar from "./TechnologiesBar.astro";
   <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">
     {projectTitle}
   </h2>
-  {!!technologiesList&&<TechnologiesBar technologiesList={technologiesList}/>}
+  {
+    !!technologiesList && (
+      <TechnologiesBar technologiesList={technologiesList} />
+    )
+  }
   {
     repositoryLinks && (
       <a
         href={repositoryLinks}
         target="_blank"
-        class="flex justify-center items-center text-indigo-600 hover:underline dark:text-indigo-400">
+        class="flex justify-center items-center text-indigo-600 hover:underline dark:text-indigo-400"
+      >
         <Github class="w-6 h-6" />
       </a>
     )

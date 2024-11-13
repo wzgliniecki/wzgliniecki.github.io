@@ -1,23 +1,13 @@
 ---
-const { skillPanelTitle, skillType, technologiesList } = Astro.props;
-import { SKILLS as allSkills } from "../constants.js";
-import SkillCard from "../components/SkillCard.astro";
+const { technologiesList } = Astro.props;
+import { TECHNOLOGIES as allTechnologies } from "../constants.js";
+import IconWrapper from "../components/IconWrapper.astro";
 ---
 
 <div class="flex max-h-20 justify-center bg-white-600 dark:bg-gray-800">
-  {allSkills
-    .filter((skill) =>  
-      technologiesList.includes(skill.skillTitle) 
-    )
-    .map((skill) => (
-      <SkillCard
-        key={skill.skillTitle}
-        skillTitle={skill.skillTitle}
-        iconName={skill.iconName}
-        darkLightMode={skill.darkLightMode}
-      />
-    ))
+  {
+    allTechnologies
+      .filter((technology) => technologiesList.includes(technology.iconTitle))
+      .map((technology) => <IconWrapper iconName={technology.iconName} />)
   }
 </div>
-
-  

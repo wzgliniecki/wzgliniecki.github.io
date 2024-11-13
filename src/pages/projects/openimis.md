@@ -26,12 +26,15 @@ By streamlining the processes of health insurance administration, data managemen
 Here are some screenshots of the openIMIS interface in action:
 
 ### ![Screenshot 1](../../../public/images/projects/screenshots/placeholder.svg)
+
 _A user dashboard showcasing health insurance statistics and claims data._
 
 ### ![Screenshot 2](../../../public/images/projects/screenshots/placeholder.svg)
+
 _A detailed view of the claims submission process, made simple and intuitive for users._
 
 ### ![Screenshot 3](../../../public/images/projects/screenshots/placeholder.svg)
+
 _The admin interface where insurance schemes and policies can be managed and configured._
 
 ## Repository

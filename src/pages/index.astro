@@ -1,44 +1,38 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import { Linkedin, Github } from "lucide-astro";
 const pageTitle = "Hi, I am Wojciech Zgliniecki!";
-import { Icon } from "astro-icon/components";
-import { ICON_SET } from "../constants.js";
+import IconWrapper from "../components/IconWrapper.astro";
 ---
 
 <MainLayout pageTitle={pageTitle}>
   <p class="flex items-center space-x-2">
-    My main technology is  
-    <Icon name=`${ICON_SET}:${'python'}${true ? '-dark' : ''}` class="w-8 h-8" />
-    and  
-    <Icon name=`${ICON_SET}:${'javascript'}${false ? '-dark' : ''}` class="w-8 h-8" />,
-    but I also code in  
-    <Icon name=`${ICON_SET}:${'rust'}${false ? '-dark' : ''}` class="w-8 h-8" />
-    and  
-    <Icon name=`${ICON_SET}:${'elixir'}${true ? '-dark' : ''}` class="w-8 h-8" />.
+    My main technology is
+    <IconWrapper iconName="python" />
+    and
+    <IconWrapper iconName="javascript" />
+    but I also code in
+    <IconWrapper iconName="rust" />
+    and
+    <IconWrapper iconName="elixir" />
   </p>
   <p class="flex items-center space-x-2">
     As a fullstack dev I use
-    <Icon name=`${ICON_SET}:${'fastapi'}${false ? '-dark' : ''}` class="w-8 h-8" />
-    and  
-    <Icon name=`${ICON_SET}:${'django'}${false ? '-dark' : ''}` class="w-8 h-8" />, on the backend
-    but I also code in  
-    <Icon name=`${ICON_SET}:${'react'}${true ? '-dark' : ''}` class="w-8 h-8" />
-    and  
-    <Icon name=`${ICON_SET}:${'vuejs'}${true ? '-dark' : ''}` class="w-8 h-8" /> with
-    and  
-    <Icon name=`${ICON_SET}:${'nuxtjs'}${true ? '-dark' : ''}` class="w-8 h-8" /> on the frontend.
-    This website was created using 
-    <Icon name=`${ICON_SET}:${'astro'}${false ? '-dark' : ''}` class="w-8 h-8" /> with
-    and  
-    <Icon name=`${ICON_SET}:${'tailwindcss'}${true ? '-dark' : ''}` class="w-8 h-8" />.
+    <IconWrapper iconName="fastapi" />
+    and
+    <IconWrapper iconName="django" />, on the backend but I also code in
+    <IconWrapper iconName="react" />
+    and
+    <IconWrapper iconName="vuedotjs" /> with and
+    <IconWrapper iconName="nuxtdotjs" /> on the frontend. This website was created
+    using
+    <IconWrapper iconName="astro" /> with and
+    <IconWrapper iconName="tailwindcss" />.
   </p>
   <p class="flex items-center space-x-2">
     Other technologies I use are:
-    <Icon name=`${ICON_SET}:${'docker'}${false ? '-dark' : ''}` class="w-8 h-8" />,
-    <Icon name=`${ICON_SET}:${'kubernetes'}${false ? '-dark' : ''}` class="w-8 h-8" />, 
-    <Icon name=`${ICON_SET}:${'pytorch'}${true ? '-dark' : ''}` class="w-8 h-8" />,
-    and  
-    <Icon name=`${ICON_SET}:${'postgresql'}${true ? '-dark' : ''}` class="w-8 h-8" />.
+    <IconWrapper iconName="docker" />,
+    <IconWrapper iconName="kubernetes" />,
+    <IconWrapper iconName="pytorch" />, and
+    <IconWrapper iconName="postgresql" />.
   </p>
 </MainLayout>
