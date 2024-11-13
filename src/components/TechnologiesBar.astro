@@ -7,7 +7,9 @@ import IconWrapper from "../components/IconWrapper.astro";
 <div class="flex max-h-20 justify-center bg-white-600 dark:bg-gray-800">
   {
     allTechnologies
-      .filter((technology) => technologiesList.includes(technology.iconTitle))
+      .filter((technology) => 
+        technologiesList.some((tech) => tech.toLowerCase() === technology.iconTitle.toLowerCase())
+      )
       .map((technology) => <IconWrapper iconName={technology.iconName} />)
   }
 </div>

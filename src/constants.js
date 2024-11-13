@@ -37,9 +37,9 @@ export const TECHNOLOGIES = [
     iconName: "kubernetes",
   },
   {
-    iconTitle: "VueJS",
+    iconTitle: "Vue",
     stackPart: "frontend",
-    iconName: "vuejs",
+    iconName: "vuedotjs",
   },
   {
     iconTitle: "Elixir",
@@ -74,7 +74,7 @@ export const TECHNOLOGIES = [
   {
     iconTitle: "Nuxt",
     stackPart: "frontend",
-    iconName: "nuxtjs",
+    iconName: "nuxtdotjs",
   },
   {
     iconTitle: "PyTorch",
@@ -118,7 +118,7 @@ export const TECHNOLOGIES = [
   },
   {
     iconTitle: "Godot",
-    stackPart: "frontend",
+    stackPart: "other",
     iconName: "godot",
   },
   {
