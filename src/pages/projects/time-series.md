@@ -1,6 +1,6 @@
 ---
 projectTitle: "Time series analysis"
-technologiesList: ["Pytorch", "Polars", "Python"]
+technologiesList: ["PyTorch", "Polars", "Python"]
 projectLogo: null
 repositoryLinks: ["https://github.com/wzgliniecki/wzgliniecki.github.io"]
 isPrivate: false

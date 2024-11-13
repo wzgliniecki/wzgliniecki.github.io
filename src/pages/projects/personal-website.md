@@ -1,6 +1,6 @@
 ---
 projectTitle: "portfolio"
-technologiesList: ["JavaScript", "astro", "tailwind"]
+technologiesList: ["JavaScript", "Astro", "Tailwind"]
 projectLogo: null
 repositoryLinks: ["https://github.com/wzgliniecki/wzgliniecki.github.io"]
 isPrivate: false
