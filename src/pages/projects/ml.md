@@ -1,11 +1,11 @@
 ---
 projectTitle: "Machine Learning Portal"
-technologiesList: ["python", "typescript", "vue", "nuxt", "fastapi"]
+technologiesList: ["Python", "TypeScript", "Vue", "Nuxt", "Fastapi"]
 projectLogo: null
 repositoryLinks: null
 isPrivate: true
 isWorkInProgress: true
-layout: ../../layouts/MainLayout.astro
+layout: ../../layouts/ProjectLayout.astro
 ---
 
 Machine Learning portal used in my own projects. Website to manage datasets and models and publish them.

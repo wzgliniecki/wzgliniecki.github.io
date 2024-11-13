@@ -1,11 +1,11 @@
 ---
 projectTitle: "Calorie counter"
-technologiesList: ["vite", "react", "tailwind", "django", "python"]
+technologiesList: ["Vite", "React", "Tailwind", "Django", "Python"]
 projectLogo: null
 repositoryLinks: ["https://github.com/wzgliniecki/wzgliniecki.github.io"]
 isPrivate: false
 isWorkInProgress: true
-layout: ../../layouts/MainLayout.astro
+layout: ../../layouts/ProjectLayout.astro
 ---
 
 Calorie counter app.

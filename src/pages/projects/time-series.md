@@ -1,11 +1,11 @@
 ---
 projectTitle: "Time series analysis"
-technologiesList: ["pytorch", "polars", "python"]
+technologiesList: ["Pytorch", "Polars", "Python"]
 projectLogo: null
 repositoryLinks: ["https://github.com/wzgliniecki/wzgliniecki.github.io"]
 isPrivate: false
 isWorkInProgress: true
-layout: ../../layouts/MainLayout.astro
+layout: ../../layouts/ProjectLayout.astro
 ---
 
 My time series forecasting project.

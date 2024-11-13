@@ -1,0 +1,53 @@
+---
+import DevelopmentWarning from "../components/DevelopmentWarning.astro";
+import Header from "../components/Header.astro";
+import SkillPanel from "../components/SkillPanel.astro";
+const { frontmatter } = Astro.props;
+import { ViewTransitions } from "astro:transitions";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <ViewTransitions />
+    <title>{frontmatter.projectTitle}</title>
+  </head>
+
+  <body
+    class="bg-white text-black dark:bg-gray-900 dark:text-white transition-all duration-300"
+  >
+    <a
+      href="#main"
+      class="skip-nav-link absolute left-2 transform -translate-y-[140%] bg-blue-500 px-8 py-2.5 transition-transform duration-325 ease-in focus:-translate-y-0.5"
+    >
+      Skip to main content
+    </a>
+    <Header />
+    <main id="main" class="max-w-7xl mx-auto px-6 py-12">
+      <h1
+        class="text-3xl font-extrabold text-center text-primary dark:text-primary-light mb-6"
+      >
+        {frontmatter.projectTitle}
+      </h1>
+      <SkillPanel technologiesList={frontmatter.technologiesList}/>
+
+      <div class="prose max-w-full text-gray-700 dark:text-gray-300">
+        <slot />
+      </div>
+    </main>
+    <DevelopmentWarning />
+  </body>
+</html>
+
+<!-- 
+projectTitle: "openIMIS"
+technologiesList: ["python", "javascript", "react", "django"]
+projectLogo: "openimis.svg"
+repositoryLinks: ["https://github.com/openimis"]
+isPrivate: false
+isWorkInProgress: false
+layout: ../../layouts/ProjectLayout.astro -->

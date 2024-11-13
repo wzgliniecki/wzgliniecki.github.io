@@ -1,11 +1,11 @@
 ---
 projectTitle: "openIMIS"
-technologiesList: ["python", "javascript", "react", "django"]
+technologiesList: ["Python", "JavaScript", "React", "Django"]
 projectLogo: "openimis.svg"
 repositoryLinks: ["https://github.com/openimis"]
 isPrivate: false
 isWorkInProgress: false
-layout: ../../layouts/MainLayout.astro
+layout: ../../layouts/ProjectLayout.astro
 ---
 
 # openIMIS - Open Insurance Management Information System
@@ -20,18 +20,6 @@ By streamlining the processes of health insurance administration, data managemen
 - **User-Friendly Interface**: Designed to provide a seamless experience for both administrators and users, ensuring that health insurance schemes are easy to manage and use.
 - **Data Management**: Facilitates the collection, storage, and analysis of health insurance data, enabling informed decision-making and the development of effective policies.
 - **Integration Capabilities**: OpenIMIS is compatible with a variety of health information systems and technologies, ensuring smooth integration with existing infrastructure.
-
-## Technologies Used
-
-openIMIS leverages a modern technology stack to ensure flexibility, scalability, and reliability. Below is a breakdown of the key technologies:
-
-### <SkillCard icon="python" title="Python" description="Python is the backbone of the backend services in openIMIS, known for its simplicity and versatility." />
-
-### <SkillCard icon="javascript" title="JavaScript" description="JavaScript is used for client-side scripting to enhance interactivity and dynamic behavior on the platform." />
-
-### <SkillCard icon="react" title="React" description="React is used for building reusable UI components and creating a dynamic user interface for openIMIS." />
-
-### <SkillCard icon="django" title="Django" description="Django is the Python web framework used to power the backend of openIMIS, managing core functionalities like database interactions and authentication." />
 
 ## Screenshots
 
