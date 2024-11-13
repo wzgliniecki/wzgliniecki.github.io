@@ -1,9 +1,9 @@
 ---
-const { skillName, iconName } = Astro.props;
+const { skillName, iconName, darkLightMode } = Astro.props;
 import { Icon } from "astro-icon/components";
 import { ICON_SET } from "../constants.js";
 ---
 
 <div "bg-white dark:bg-gray-800 dark:text-white shadow-lg rounded-lg p-6 text-center space-y-4">
-  <Icon name=`${ICON_SET}:${iconName}` class="text-6xl"/>
+  <Icon name=`${ICON_SET}:${iconName}${darkLightMode ? "-dark" : ""}` class="text-6xl"/>
 </div>

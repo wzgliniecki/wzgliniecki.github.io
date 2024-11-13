@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^3.1.9",
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^5.1.2",
     "astro": "^4.16.6",
@@ -18,7 +19,7 @@
     "tailwindcss": "^3.4.7"
   },
   "devDependencies": {
-    "@iconify-json/catppuccin": "^1.2.6",
+    "@iconify-json/skill-icons": "^1.2.0",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1"
   }

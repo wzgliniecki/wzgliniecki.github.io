@@ -6,8 +6,10 @@ import sitemap from "@astrojs/sitemap";
 
 import icon from "astro-icon";
 
+import mdx from "@astrojs/mdx";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://wzgliniecki.github.io",
-  integrations: [tailwind(), sitemap(), icon()],
+  integrations: [tailwind(), sitemap(), icon(), mdx()],
 });

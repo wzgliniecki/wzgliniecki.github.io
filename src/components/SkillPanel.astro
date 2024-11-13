@@ -1,19 +1,20 @@
 ---
 const { skillPanelTitle, skillType } = Astro.props;
-const allSkills = await Astro.glob("../pages/skills/*.md");
+import { SKILLS as allSkills } from "../constants.js";
 import SkillCard from "../components/SkillCard.astro";
 ---
 
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 h-28 bg-white-600 dark:bg-gray-800 " >
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 h-40 bg-white-600 dark:bg-gray-800 " >
     {
-      allSkills
-        .filter((skill) => skill.frontmatter.stackPart === skillType)
+    allSkills
+        .filter((skill) => skill.stackPart === skillType)
         .map((skill) => (
-          <SkillCard
-            key={skill.frontmatter.skillTitle}
-            skillTitle={skill.frontmatter.skillTitle}
-            iconName={skill.frontmatter.iconName}
-          />
+        <SkillCard
+            key={skill.skillTitle}
+            skillTitle={skill.skillTitle}
+            iconName={skill.iconName}
+            darkLightMode={skill.darkLightMode}
+        />
         ))
     }
 </div>
