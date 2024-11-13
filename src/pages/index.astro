@@ -1,22 +1,12 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import { Linkedin, Github } from "lucide-astro";
-const pageTitle = "Wojciech Zgliniecki";
+const pageTitle = "Hi, I am Wojciech Zgliniecki!";
 import { Icon } from "astro-icon/components";
 import { ICON_SET } from "../constants.js";
 ---
 
 <MainLayout pageTitle={pageTitle}>
-  <h2>Hi I am Wojciech.</h2>
-  <h2>Fullstack developer</h2>
-  <div class="flex">
-    <a href="https://pl.linkedin.com/in/wojciech-zgliniecki-1279a1166"
-      ><Linkedin /></a
-    >
-    <a href="https://github.com/wzgliniecki/"><Github /></a>
-  </div>
-  </br>
-  <!-- <p>My main technology is  <Icon name=`${ICON_SET}:${"python"}${true ? "-dark" : ""}` class="w-20 h-20"/> and  <Icon name=`${ICON_SET}:${"javascript"}${false ? "-dark" : ""}` class="w-20 h-20"/>, but I also code in  <Icon name=`${ICON_SET}:${"rust"}${false ? "-dark" : ""}` class="w-20 h-20"/> and  <Icon name=`${ICON_SET}:${"elixir"}${true ? "-dark" : ""}` class="w-20 h-20"/>. </p> -->
   <p class="flex items-center space-x-2">
     My main technology is  
     <Icon name=`${ICON_SET}:${'python'}${true ? '-dark' : ''}` class="w-8 h-8" />
@@ -26,5 +16,29 @@ import { ICON_SET } from "../constants.js";
     <Icon name=`${ICON_SET}:${'rust'}${false ? '-dark' : ''}` class="w-8 h-8" />
     and  
     <Icon name=`${ICON_SET}:${'elixir'}${true ? '-dark' : ''}` class="w-8 h-8" />.
+  </p>
+  <p class="flex items-center space-x-2">
+    As a fullstack dev I use
+    <Icon name=`${ICON_SET}:${'fastapi'}${false ? '-dark' : ''}` class="w-8 h-8" />
+    and  
+    <Icon name=`${ICON_SET}:${'django'}${false ? '-dark' : ''}` class="w-8 h-8" />, on the backend
+    but I also code in  
+    <Icon name=`${ICON_SET}:${'react'}${true ? '-dark' : ''}` class="w-8 h-8" />
+    and  
+    <Icon name=`${ICON_SET}:${'vuejs'}${true ? '-dark' : ''}` class="w-8 h-8" /> with
+    and  
+    <Icon name=`${ICON_SET}:${'nuxtjs'}${true ? '-dark' : ''}` class="w-8 h-8" /> on the frontend.
+    This website was created using 
+    <Icon name=`${ICON_SET}:${'astro'}${false ? '-dark' : ''}` class="w-8 h-8" /> with
+    and  
+    <Icon name=`${ICON_SET}:${'tailwindcss'}${true ? '-dark' : ''}` class="w-8 h-8" />.
+  </p>
+  <p class="flex items-center space-x-2">
+    Other technologies I use are:
+    <Icon name=`${ICON_SET}:${'docker'}${false ? '-dark' : ''}` class="w-8 h-8" />,
+    <Icon name=`${ICON_SET}:${'kubernetes'}${false ? '-dark' : ''}` class="w-8 h-8" />, 
+    <Icon name=`${ICON_SET}:${'pytorch'}${true ? '-dark' : ''}` class="w-8 h-8" />,
+    and  
+    <Icon name=`${ICON_SET}:${'postgresql'}${true ? '-dark' : ''}` class="w-8 h-8" />.
   </p>
 </MainLayout>
