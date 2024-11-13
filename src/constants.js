@@ -104,7 +104,7 @@ export const TECHNOLOGIES = [
   {
     iconTitle: "Phoenix",
     stackPart: "backend",
-    iconName: "phoenix",
+    iconName: "phoenixframework",
   },
   {
     iconTitle: "RStudio",
@@ -119,7 +119,7 @@ export const TECHNOLOGIES = [
   {
     iconTitle: "Godot",
     stackPart: "other",
-    iconName: "godot",
+    iconName: "godotengine",
   },
   {
     iconTitle: "Vite",
