@@ -2,7 +2,8 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { Linkedin, Github } from "lucide-astro";
 const pageTitle = "Wojciech Zgliniecki";
-import SkillPanel from "../components/SkillPanel.astro";
+import { Icon } from "astro-icon/components";
+import { ICON_SET } from "../constants.js";
 ---
 
 <MainLayout pageTitle={pageTitle}>
@@ -15,9 +16,15 @@ import SkillPanel from "../components/SkillPanel.astro";
     <a href="https://github.com/wzgliniecki/"><Github /></a>
   </div>
   </br>
-  <SkillPanel skillType="backend" />
-  </br>
-  <SkillPanel skillType="frontend" />
-  </br>
-  <SkillPanel skillType="other" />
+  <!-- <p>My main technology is  <Icon name=`${ICON_SET}:${"python"}${true ? "-dark" : ""}` class="w-20 h-20"/> and  <Icon name=`${ICON_SET}:${"javascript"}${false ? "-dark" : ""}` class="w-20 h-20"/>, but I also code in  <Icon name=`${ICON_SET}:${"rust"}${false ? "-dark" : ""}` class="w-20 h-20"/> and  <Icon name=`${ICON_SET}:${"elixir"}${true ? "-dark" : ""}` class="w-20 h-20"/>. </p> -->
+  <p class="flex items-center space-x-2">
+    My main technology is  
+    <Icon name=`${ICON_SET}:${'python'}${true ? '-dark' : ''}` class="w-8 h-8" />
+    and  
+    <Icon name=`${ICON_SET}:${'javascript'}${false ? '-dark' : ''}` class="w-8 h-8" />,
+    but I also code in  
+    <Icon name=`${ICON_SET}:${'rust'}${false ? '-dark' : ''}` class="w-8 h-8" />
+    and  
+    <Icon name=`${ICON_SET}:${'elixir'}${true ? '-dark' : ''}` class="w-8 h-8" />.
+  </p>
 </MainLayout>
