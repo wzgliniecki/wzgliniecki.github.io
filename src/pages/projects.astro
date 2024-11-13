@@ -19,6 +19,7 @@ const allProjects = await Astro.glob("../pages/projects/*.md");
             projectLogo={project.frontmatter.projectLogo}
             repositoryLinks={project.frontmatter.repositoryLinks}
             projectSlug={projectSlug}
+            technologiesList={project.frontmatter.technologiesList}
           />
         );
       })

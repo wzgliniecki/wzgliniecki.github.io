@@ -1,7 +1,6 @@
 ---
 import DevelopmentWarning from "../components/DevelopmentWarning.astro";
 import Header from "../components/Header.astro";
-import SkillPanel from "../components/SkillPanel.astro";
 const { frontmatter } = Astro.props;
 import { ViewTransitions } from "astro:transitions";
 ---
@@ -36,18 +35,8 @@ import { ViewTransitions } from "astro:transitions";
 
       <div class="prose max-w-full text-gray-700 dark:text-gray-300">
         <slot />
-        <SkillPanel technologiesList={frontmatter.technologiesList}/>
       </div>
     </main>
     <DevelopmentWarning />
   </body>
 </html>
-
-<!-- 
-projectTitle: "openIMIS"
-technologiesList: ["python", "javascript", "react", "django"]
-projectLogo: "openimis.svg"
-repositoryLinks: ["https://github.com/openimis"]
-isPrivate: false
-isWorkInProgress: false
-layout: ../../layouts/ProjectLayout.astro -->
