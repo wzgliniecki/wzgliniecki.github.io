@@ -7,6 +7,7 @@ const {
   repositoryLinks,
   projectSlug,
 } = Astro.props;
+import { Github } from "lucide-astro";
 ---
 
 <div
@@ -27,9 +28,8 @@ const {
       <a
         href={repositoryLinks}
         target="_blank"
-        class="text-indigo-600 hover:underline dark:text-indigo-400"
-      >
-        View on GitHub
+        class="flex justify-center items-center text-indigo-600 hover:underline dark:text-indigo-400">
+        <Github class="w-6 h-6" />
       </a>
     )
   }
