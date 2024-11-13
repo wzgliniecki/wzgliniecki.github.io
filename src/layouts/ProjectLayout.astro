@@ -33,10 +33,10 @@ import { ViewTransitions } from "astro:transitions";
       >
         {frontmatter.projectTitle}
       </h1>
-      <SkillPanel technologiesList={frontmatter.technologiesList}/>
 
       <div class="prose max-w-full text-gray-700 dark:text-gray-300">
         <slot />
+        <SkillPanel technologiesList={frontmatter.technologiesList}/>
       </div>
     </main>
     <DevelopmentWarning />

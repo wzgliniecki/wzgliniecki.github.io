@@ -37,7 +37,4 @@ _The admin interface where insurance schemes and policies can be managed and con
 ## Repository
 
 For more details or to contribute to the project, check out the openIMIS repository on [GitHub](https://github.com/openimis).
-
----
-
 By leveraging modern web technologies, openIMIS is positioned to revolutionize the management of health insurance in emerging markets, promoting greater inclusivity, transparency, and efficiency in healthcare financing.
