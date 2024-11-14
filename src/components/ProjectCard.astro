@@ -13,9 +13,9 @@ import TechnologiesBar from "./TechnologiesBar.astro";
 ---
 
 <div
-  class="bg-white dark:bg-gray-800 dark:text-white shadow-lg rounded-lg p-6 text-center space-y-4"
+  class="bg-mainAccent dark:bg-darkBg dark:text-white shadow-lg rounded-lg p-6 text-center space-y-4"
 >
-  <a href={`/projects/${projectSlug}`} class="block">
+  <a href={`/projects/${projectSlug}`} class="block bg-white">
     <img
       src={`/images/projects/logos/${projectLogo ?? "placeholder.svg"}`}
       alt={projectTitle}

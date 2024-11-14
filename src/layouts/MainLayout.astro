@@ -17,7 +17,7 @@ import { ViewTransitions } from "astro:transitions";
   </head>
 
   <body
-    class="bg-white text-black dark:bg-gray-900 dark:text-white transition-all duration-300"
+    class="bg-bg text-text dark:bg-darkBg dark:text-darkText transition-all duration-300"
   >
     <a
       href="#main"
@@ -28,14 +28,13 @@ import { ViewTransitions } from "astro:transitions";
     <Header />
     <main id="main" class="max-w-7xl mx-auto px-6 py-12">
       <h1
-        class="text-3xl font-extrabold text-center text-primary dark:text-primary-light mb-6"
+        class="text-3xl font-extrabold text-center text-primary text-text dark:text-darkText mb-6"
       >
         {pageTitle}
       </h1>
-      <div class="prose max-w-full text-gray-700 dark:text-gray-300">
+      <div class="prose max-w-full text-text dark:text-darkText">
         <slot />
       </div>
     </main>
-    <DevelopmentWarning />
   </body>
 </html>
