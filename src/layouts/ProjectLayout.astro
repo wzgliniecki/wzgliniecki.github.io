@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 const { frontmatter } = Astro.props;
 import { ViewTransitions } from "astro:transitions";
+import { Github, MonitorPlay } from "lucide-astro";
 ---
 
 <html lang="en">
@@ -31,7 +32,36 @@ import { ViewTransitions } from "astro:transitions";
       >
         {frontmatter.projectTitle}
       </h1>
-
+      <div class="flex row place-content-center content-between">
+      <button
+      type="button"
+      class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] bg-[#FFA6F6] hover:bg-[#fa8cef] active:bg-[#f774ea] h-10 w-25"
+    >
+          <a
+            href={frontmatter.repositoryLinks}
+            target="_blank"
+            class="flex justify-center items-center text-black  hover:underline "
+          >
+            <Github class="w-6 h-6" />
+            Repository
+          </a>
+        
+    </button>
+    <button
+        type="button"
+        class="flex justify-center p-2 rounded-lg border-black border-2 hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] bg-[#FFA6F6] hover:bg-[#fa8cef] active:bg-[#f774ea] h-10 w-25"
+      >
+            <a
+              href={frontmatter.repositoryLinks}
+              target="_blank"
+              class="flex justify-center items-center text-black hover:underline"
+            >
+              <MonitorPlay class="w-6 h-6"/>
+              Demo
+            </a>
+      </button>
+      </div>
+      </br>
       <div class="prose max-w-full text-text dark:text-darkText">
         <slot />
       </div>
