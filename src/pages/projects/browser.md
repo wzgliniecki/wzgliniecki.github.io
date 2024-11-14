@@ -1,5 +1,5 @@
 ---
-projectTitle: "browser"
+projectTitle: "Browser"
 technologiesList: ["Python"]
 projectLogo: null
 repositoryLinks: null

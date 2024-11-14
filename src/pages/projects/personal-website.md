@@ -1,5 +1,5 @@
 ---
-projectTitle: "portfolio"
+projectTitle: "Portfolio"
 technologiesList: ["JavaScript", "Astro", "Tailwind"]
 projectLogo: null
 repositoryLinks: ["https://github.com/wzgliniecki/wzgliniecki.github.io"]

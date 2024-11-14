@@ -13,15 +13,16 @@ import TechnologiesBar from "./TechnologiesBar.astro";
 ---
 
 <div
-  class="bg-mainAccent dark:bg-darkBg dark:text-white shadow-lg rounded-lg p-6 text-center space-y-4"
+  class="bg-white  dark:text-white border-black border-2 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] rounded-md text-center"
 >
-  <a href={`/projects/${projectSlug}`} class="block bg-white">
+  <a href={`/projects/${projectSlug}`} class="block cursor-pointer">
     <img
       src={`/images/projects/logos/${projectLogo ?? "placeholder.svg"}`}
       alt={projectTitle}
-      class="mx-auto h-32 w-auto object-contain"
+      class="mx-auto h-32 w-auto object-contain mb-2 mt-2"
     />
   </a>
+  <div class="bg-mainAccent min-w-full h-100 border-black border-t-2 ">
   <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">
     {projectTitle}
   </h2>
@@ -35,10 +36,22 @@ import TechnologiesBar from "./TechnologiesBar.astro";
       <a
         href={repositoryLinks}
         target="_blank"
-        class="flex justify-center items-center text-indigo-600 hover:underline dark:text-indigo-400"
-      >
+        class="flex justify-center items-center text-black  dark:text-white hover:underline "
+        >
         <Github class="w-6 h-6" />
       </a>
     )
   }
+    {
+      !repositoryLinks && (
+        <a
+          href={repositoryLinks}
+          target="_blank"
+          class="flex justify-center items-center text-black dark:text-white hover:underline"
+        >
+          <Github class="w-6 h-6" />
+        </a>
+      )
+    }
+  </div>
 </div>
