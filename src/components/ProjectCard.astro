@@ -13,7 +13,7 @@ import TechnologiesBar from "./TechnologiesBar.astro";
 ---
 
 <div
-  class="bg-white  dark:text-white border-black border-2 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] rounded-md text-center"
+  class="bg-white dark:text-white border-black border-2 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] rounded-md text-center"
 >
   <a href={`/projects/${projectSlug}`} class="block cursor-pointer">
     <img
@@ -22,32 +22,34 @@ import TechnologiesBar from "./TechnologiesBar.astro";
       class="mx-auto h-32 w-auto object-contain mb-2 mt-2"
     />
   </a>
-  <div class="bg-mainAccent min-w-full h-100 border-black border-t-2 ">
-  <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">
-    {projectTitle}
-  </h2>
-  {
-    !!technologiesList && (
-      <TechnologiesBar technologiesList={technologiesList} />
-    )
-  }
-  {
-    repositoryLinks && (
-      <a
-        href={repositoryLinks}
-        target="_blank"
-        class="flex justify-center items-center text-black  dark:text-white hover:underline "
+  <div
+    class="bg-main dark:bg-mainAccent min-w-full h-100 border-black border-t-2"
+  >
+    <h2 class="text-xl font-semibold text-gray-800">
+      {projectTitle}
+    </h2>
+    {
+      !!technologiesList && (
+        <TechnologiesBar technologiesList={technologiesList} />
+      )
+    }
+    {
+      repositoryLinks && (
+        <a
+          href={repositoryLinks}
+          target="_blank"
+          class="flex justify-center items-center text-black  hover:underline "
         >
-        <Github class="w-6 h-6" />
-      </a>
-    )
-  }
+          <Github class="w-6 h-6" />
+        </a>
+      )
+    }
     {
       !repositoryLinks && (
         <a
           href={repositoryLinks}
           target="_blank"
-          class="flex justify-center items-center text-black dark:text-white hover:underline"
+          class="flex justify-center items-center text-black hover:underline"
         >
           <Github class="w-6 h-6" />
         </a>
