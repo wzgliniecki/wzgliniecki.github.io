@@ -8,7 +8,7 @@ const {
   projectSlug,
   technologiesList,
 } = Astro.props;
-import { Github } from "lucide-astro";
+import { Github, MonitorPlay } from "lucide-astro";
 import TechnologiesBar from "./TechnologiesBar.astro";
 ---
 
@@ -28,32 +28,41 @@ import TechnologiesBar from "./TechnologiesBar.astro";
     <h2 class="text-xl font-semibold text-gray-800">
       {projectTitle}
     </h2>
-    {
-      !!technologiesList && (
-        <TechnologiesBar technologiesList={technologiesList} />
-      )
-    }
-    {
-      repositoryLinks && (
-        <a
-          href={repositoryLinks}
-          target="_blank"
-          class="flex justify-center items-center text-black  hover:underline "
+    <div class="flex row w-full">
+      <button
+        type="button"
+        class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] bg-[#FFA6F6] hover:bg-[#fa8cef] active:bg-[#f774ea] h-10 w-1/2"
+      >
+            <a
+              href={repositoryLinks}
+              target="_blank"
+              class="flex justify-center items-center text-black  hover:underline "
+            >
+              Repository
+              <Github class="w-6 h-6" />
+            </a>
+          
+      </button>
+      <button
+          type="button"
+          class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] bg-[#FFA6F6] hover:bg-[#fa8cef] active:bg-[#f774ea] h-10 w-1/2"
         >
-          <Github class="w-6 h-6" />
-        </a>
-      )
-    }
-    {
-      !repositoryLinks && (
-        <a
-          href={repositoryLinks}
-          target="_blank"
-          class="flex justify-center items-center text-black hover:underline"
-        >
-          <Github class="w-6 h-6" />
-        </a>
-      )
-    }
+              <a
+                href={repositoryLinks}
+                target="_blank"
+                class="flex justify-center items-center text-black hover:underline"
+              >
+                Demo
+                <MonitorPlay class="w-6 h-6"/>
+              </a>
+        </button>
+      </div>
+
+
+        {
+          !!technologiesList && (
+            <TechnologiesBar technologiesList={technologiesList} />
+          )
+        }
   </div>
 </div>

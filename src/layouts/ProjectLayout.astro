@@ -1,5 +1,4 @@
 ---
-import DevelopmentWarning from "../components/DevelopmentWarning.astro";
 import Header from "../components/Header.astro";
 const { frontmatter } = Astro.props;
 import { ViewTransitions } from "astro:transitions";
@@ -37,6 +36,5 @@ import { ViewTransitions } from "astro:transitions";
         <slot />
       </div>
     </main>
-    <DevelopmentWarning />
   </body>
 </html>
