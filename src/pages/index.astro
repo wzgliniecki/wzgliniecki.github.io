@@ -1,38 +1,170 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-const pageTitle = "Hi, I am Wojciech Zgliniecki!";
+const pageTitle = "Welcome to my portfolio!";
 import IconWrapper from "../components/IconWrapper.astro";
 ---
 
 <MainLayout pageTitle={pageTitle}>
   <p class="flex items-center space-x-2">
-    My main technology is
-    <IconWrapper iconName="python" />
-    and
-    <IconWrapper iconName="javascript" />
-    but I also code in
-    <IconWrapper iconName="rust" />
-    and
-    <IconWrapper iconName="elixir" />
+    I am a software developer who can code in
+    <div class="relative inline-block border-b border-dotted group">
+    <!-- "Backend developer" text is the hover target -->
+    multiple languages
+  
+    <!-- Tooltip for Python -->
+    <div class="absolute hidden group-hover:block z-10 text-text dark:text-darkText text-center rounded py-2 px-3 bottom-[25px] left-[60%]">
+      <div
+      class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] bg-[#FFA6F6] hover:bg-[#fa8cef] active:bg-[#f774ea] w-10 h-10"
+    >
+        <IconWrapper iconName="python" />
+    </div>
+    </div>
+  
+    <!-- Tooltip for JavaScript -->
+    <div class="absolute hidden group-hover:block z-10 text-text dark:text-darkText text-center rounded py-2 px-3 top-[25px] left-[60%]">
+      <div
+      class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] bg-[#FFA6F6] hover:bg-[#fa8cef] active:bg-[#f774ea] w-10 h-10"
+    >
+        <IconWrapper iconName="javascript" />
+    </div>
+    </div>
+  
+    <!-- Tooltip for Rust -->
+    <div class="absolute hidden group-hover:block z-10 text-text dark:text-darkText text-center rounded py-2 px-3 top-[25px] right-[120%]">
+      <div
+      class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] bg-[#FFA6F6] hover:bg-[#fa8cef] active:bg-[#f774ea] w-10 h-10"
+    >
+        <IconWrapper iconName="javascript" />
+    </div>
+    </div>
+  
+    <!-- Tooltip for Elixir -->
+    <div class="absolute hidden group-hover:block z-10 text-text dark:text-darkText text-center rounded py-2 px-3 bottom-[25px] right-[120%]">
+      <div
+      class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] bg-[#FFA6F6] hover:bg-[#fa8cef] active:bg-[#f774ea] w-10 h-10"
+    >        <IconWrapper iconName="elixir" />
+      </div>
+    </div>
+  </div>
+  . I work mainly as a    <div class="relative inline-block border-b border-dotted group">
+    <!-- "Backend developer" text is the hover target -->
+    backend developer
+  
+    <!-- Tooltip for Python -->
+    <div class="absolute hidden group-hover:block z-10 text-text dark:text-darkText text-center rounded py-2 px-3 bottom-[25px] left-[60%]">
+      <div
+      class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] bg-[#FFA6F6] hover:bg-[#fa8cef] active:bg-[#f774ea] w-10 h-10"
+    >
+        <IconWrapper iconName="django" />
+    </div>
+    </div>
+  
+    <!-- Tooltip for JavaScript -->
+    <div class="absolute hidden group-hover:block z-10 text-text dark:text-darkText text-center rounded py-2 px-3 top-[25px] left-[60%]">
+      <div
+      class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] bg-[#FFA6F6] hover:bg-[#fa8cef] active:bg-[#f774ea] w-10 h-10"
+    >
+        <IconWrapper iconName="fastapi" />
+    </div>
+    </div>
+  
+    <!-- Tooltip for Rust -->
+    <div class="absolute hidden group-hover:block z-10 text-text dark:text-darkText text-center rounded py-2 px-3 top-[25px] right-[120%]">
+      <div
+      class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] bg-[#FFA6F6] hover:bg-[#fa8cef] active:bg-[#f774ea] w-10 h-10"
+    >
+        <IconWrapper iconName="phoenixframework" />
+    </div>
+    </div>
+  
+    <!-- Tooltip for Elixir -->
+    <div class="absolute hidden group-hover:block z-10 text-text dark:text-darkText text-center rounded py-2 px-3 bottom-[25px] right-[120%]">
+      <div
+      class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] bg-[#FFA6F6] hover:bg-[#fa8cef] active:bg-[#f774ea] w-10 h-10"
+    >        <IconWrapper iconName="postgresql" />
+      </div>
+    </div>
+  </div>.
+  But I also enjoy working as a 
+  <div class="relative inline-block border-b border-dotted group">
+    <!-- "Backend developer" text is the hover target -->
+     frontend developer
+  
+    <!-- Tooltip for Python -->
+    <div class="absolute hidden group-hover:block z-10 text-text dark:text-darkText text-center rounded py-2 px-3 bottom-[25px] left-[60%]">
+      <div
+      class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] bg-[#FFA6F6] hover:bg-[#fa8cef] active:bg-[#f774ea] w-10 h-10"
+    >
+        <IconWrapper iconName="react" />
+    </div>
+    </div>
+  
+    <!-- Tooltip for JavaScript -->
+    <div class="absolute hidden group-hover:block z-10 text-text dark:text-darkText text-center rounded py-2 px-3 top-[25px] left-[60%]">
+      <div
+      class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] bg-[#FFA6F6] hover:bg-[#fa8cef] active:bg-[#f774ea] w-10 h-10"
+    >
+        <IconWrapper iconName="vuedotjs" />
+    </div>
+    </div>
+  
+    <!-- Tooltip for Rust -->
+    <div class="absolute hidden group-hover:block z-10 text-text dark:text-darkText text-center rounded py-2 px-3 top-[25px] right-[120%]">
+      <div
+      class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] bg-[#FFA6F6] hover:bg-[#fa8cef] active:bg-[#f774ea] w-10 h-10"
+    >
+        <IconWrapper iconName="nuxtdotjs" />
+    </div>
+    </div>
+  
+    <!-- Tooltip for Elixir -->
+    <div class="absolute hidden group-hover:block z-10 text-text dark:text-darkText text-center rounded py-2 px-3 bottom-[25px] right-[120%]">
+      <div
+      class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] bg-[#FFA6F6] hover:bg-[#fa8cef] active:bg-[#f774ea] w-10 h-10"
+    >        <IconWrapper iconName="remix" />
+      </div>
+    </div>
+  </div>.
+  . Also enjoy working using a lot of
+  <div class="relative inline-block border-b border-dotted group">
+    <!-- "Backend developer" text is the hover target -->
+    other technologies
+  
+    <!-- Tooltip for Python -->
+    <div class="absolute hidden group-hover:block z-10 text-text dark:text-darkText text-center rounded py-2 px-3 bottom-[25px] left-[60%]">
+      <div
+      class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] bg-[#FFA6F6] hover:bg-[#fa8cef] active:bg-[#f774ea] w-10 h-10"
+    >
+        <IconWrapper iconName="docker" />
+    </div>
+    </div>
+  
+    <!-- Tooltip for JavaScript -->
+    <div class="absolute hidden group-hover:block z-10 text-text dark:text-darkText text-center rounded py-2 px-3 top-[25px] left-[60%]">
+      <div
+      class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] bg-[#FFA6F6] hover:bg-[#fa8cef] active:bg-[#f774ea] w-10 h-10"
+    >
+        <IconWrapper iconName="kubernetes" />
+    </div>
+    </div>
+  
+    <!-- Tooltip for Rust -->
+    <div class="absolute hidden group-hover:block z-10 text-text dark:text-darkText text-center rounded py-2 px-3 top-[25px] right-[120%]">
+      <div
+      class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] bg-[#FFA6F6] hover:bg-[#fa8cef] active:bg-[#f774ea] w-10 h-10"
+    >
+        <IconWrapper iconName="pytorch" />
+    </div>
+    </div>
+  
+    <!-- Tooltip for Elixir -->
+    <div class="absolute hidden group-hover:block z-10 text-text dark:text-darkText text-center rounded py-2 px-3 bottom-[25px] right-[120%]">
+      <div
+      class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] bg-[#FFA6F6] hover:bg-[#fa8cef] active:bg-[#f774ea] w-10 h-10"
+    >        <IconWrapper iconName="nginx" />
+      </div>
+    </div>
+  </div>
   </p>
-  <p class="flex items-center space-x-2">
-    As a fullstack dev I use
-    <IconWrapper iconName="fastapi" />
-    and
-    <IconWrapper iconName="django" />, on the backend but I also code in
-    <IconWrapper iconName="react" />
-    and
-    <IconWrapper iconName="vuedotjs" /> with and
-    <IconWrapper iconName="nuxtdotjs" /> on the frontend. This website was created
-    using
-    <IconWrapper iconName="astro" /> with and
-    <IconWrapper iconName="tailwindcss" />.
-  </p>
-  <p class="flex items-center space-x-2">
-    Other technologies I use are:
-    <IconWrapper iconName="docker" />,
-    <IconWrapper iconName="kubernetes" />,
-    <IconWrapper iconName="pytorch" />, and
-    <IconWrapper iconName="postgresql" />.
-  </p>
+
 </MainLayout>
