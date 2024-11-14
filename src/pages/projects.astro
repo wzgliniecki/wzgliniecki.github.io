@@ -12,7 +12,7 @@ const allProjects = await Astro.glob("../pages/projects/*.md");
   >
     {
       allProjects
-        // .filter((project) => project.frontmatter.isPrivate === false)
+        .filter((project) => project.frontmatter.isPrivate === false)
         .map((project) => {
           const projectSlug = project.url.split("/").pop().replace(".md", "");
           return (
