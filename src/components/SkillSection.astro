@@ -1,0 +1,16 @@
+---
+const {
+  sectionTitle,
+  stackPart
+} = Astro.props;
+import TechnologiesBar from "./TechnologiesBar.astro";
+import { TECHNOLOGIES as technologiesList } from "../constants";
+---
+<!-- <div class="flex max-h-10 justify-center bg-main dark:bg-mainAccent"> -->
+
+<div
+    class="bg-main dark:bg-mainAccent border-black border-2 shadow-[8px_8px_0px_rgba(0,0,0,1)] rounded-md text-center"
+>
+    <h2>{sectionTitle}</h2>
+    <TechnologiesBar technologiesList={technologiesList.filter(tech => tech.stackPart === stackPart).map(tech => tech.iconTitle)} />
+</div>
