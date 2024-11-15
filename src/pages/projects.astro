@@ -3,7 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 
 const pageTitle = "Projects";
-const allProjects = await Astro.glob("../pages/projects/*.md");
+const allProjects = await Astro.glob("../pages/projects/*.mdx");
 ---
 
 <MainLayout pageTitle={pageTitle}>
