@@ -1,5 +1,3 @@
-// import defaultTheme from 'tailwindcss/defaultTheme'
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -37,6 +35,9 @@ export default {
       fontWeight: {
         base: "700",
         heading: "900",
+      },
+      fontFamily: {
+        sans: ['Public Sans', 'sans-serif'],
       },
     },
   },
