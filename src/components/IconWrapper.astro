@@ -4,4 +4,4 @@ import { ICON_SET } from "../constants.js";
 const { iconName, iconSet, classes } = Astro.props;
 ---
 
-<Icon name=`${iconSet ?? ICON_SET}:${iconName}` class={classes ?? "w-8 h-8"} />
+<Icon name=`${iconSet ?? ICON_SET}:${iconName}` class={classes ?? "w-8 h-8"}   title={iconName}/>
