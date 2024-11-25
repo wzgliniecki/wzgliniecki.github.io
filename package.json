@@ -16,6 +16,7 @@
     "astro": "^4.16.13",
     "astro-icon": "^1.1.2",
     "lucide-astro": "^0.456.0",
+    "motion": "^11.11.17",
     "tailwindcss": "^3.4.7"
   },
   "devDependencies": {
