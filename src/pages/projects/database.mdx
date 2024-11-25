@@ -1,11 +1,29 @@
 ---
-projectTitle: "Database"
-technologiesList: ["C"]
+projectTitle: "Clone DB"
+technologiesList: ["Python", "WebSockets", "WSGI", "ASGI"]
 projectLogo: null
-repositoryLinks: ["https://github.com/wzgliniecki/wzgliniecki.github.io"]
+repositoryLinks: ["https://github.com/wzgliniecki/clonedb"]
 isPrivate: false
 isWorkInProgress: true
 layout: ../../layouts/ProjectLayout.astro
 ---
 
-Database.
+## Project Overview
+
+**Clone DB** is a database implementation built entirely in **Python**, inspired by two tutorials that originally provided insights into creating a database in **C**. This project aims to replicate the functionality of **SQLite**, but with added capabilities for modern web interactions.
+
+The goal is to create a lightweight, custom database that is capable of handling connections via **WebSockets**, while being compatible with both **WSGI** and **ASGI** protocols. These protocols allow for synchronous and asynchronous communication between the server and clients, making Clone DB highly scalable for web applications. 
+
+Clone DB is based on two main tutorials:
+
+1. [CStack DB Tutorial (Part 1)](https://cstack.github.io/db_tutorial/parts/part1.html): This comprehensive guide covers the fundamentals of building a simple database engine in C.
+2. [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/): This resource teaches network programming and provides insights into implementing socket-based communication, which is a core part of Clone DB's WebSocket support.
+
+
+### Key Features
+
+- **WebSocket Support:** Provides real-time, bidirectional communication between clients and the database. Ideal for applications requiring live data updates or continuous interactions.
+- **WSGI and ASGI Compatibility:** Supports both synchronous (WSGI) and asynchronous (ASGI) Python web frameworks, offering flexibility for various server-side architectures.
+- **SQL Database Engine:** Implements core database functionalities similar to SQLite, including storing, retrieving, and managing data in a compact, file-based format.
+
+
