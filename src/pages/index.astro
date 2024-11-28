@@ -1,29 +1,10 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 const pageTitle = "WELCOME TO MY PORTFOLIO!";
-import SkillSection from "../components/SkillSection.astro";
 ---
 
 <MainLayout pageTitle={pageTitle}>
-  <div class="grid grid-cols-2 gap-4 h-100">
-    <div class="flex flex-col space-y-4 h-100">
-      <div
-      class="bg-main dark:bg-mainAccent border-black border-2 shadow-[8px_8px_0px_rgba(0,0,0,1)] rounded-md text-center"
-      >
-        <h2>Software Developer</h2>
-      </div>
-      <div
-      class="bg-main dark:bg-mainAccent border-black border-2 shadow-[8px_8px_0px_rgba(0,0,0,1)] rounded-md text-center"
-      >
-        <h2>Economist</h2>
-      </div>
-  </div>
-
-
-    <div class="flex flex-col space-y-4 h-100">
-      <SkillSection stackPart={"backend"} sectionTitle={"BACKEND"}/>
-      <SkillSection stackPart={"frontend"} sectionTitle={"FRONTEND"}/>
-      <SkillSection stackPart={"other"} sectionTitle={"OTHER"}/>
-    </div>
-  </div>
+    <h2 class="text-2xl font-extrabold text-center text-primary text-text dark:text-darkText mb-6">Software Developer</h2>
+    <h2 class="text-2xl font-extrabold text-center text-primary text-text dark:text-darkText mb-6">Economist</h2>
+    <h2 class="text-2xl font-extrabold text-center text-primary text-text dark:text-darkText mb-6">Engineer</h2>
 </MainLayout>
