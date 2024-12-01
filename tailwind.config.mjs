@@ -9,19 +9,19 @@ export default {
         overlay: "rgba(0,0,0,0.8)",
 
         // buttons
-        button: '#FFA6F6',
+        button: '#DC2626',
         buttonHover: '#fa8cef',
         buttonActive: '#f774ea',
 
         // light mode
-        bg: "#dfe5f2",
-        text: "#000",
-        border: "#000",
+        bg: "#020617",
+        text: "#DCFCE7",
+        border: "#22D3EE",
 
         // dark mode
-        darkBg: "#272933",
-        darkText: "#eeefe9",
-        darkBorder: "#000",
+        darkBg: "#020617",
+        darkText: "#DCFCE7",
+        darkBorder: "#0369A1",
         secondaryBlack: "#212121",
       },
       borderRadius: {
