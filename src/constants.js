@@ -3,7 +3,7 @@ export const ICON_SET = "simple-icons";
 export const TECHNOLOGIES = [
   {
     iconTitle: "Python",
-    stackPart: "backend",
+    stackPart: "language",
     iconName: "python",
   },
   {
@@ -13,12 +13,12 @@ export const TECHNOLOGIES = [
   },
   {
     iconTitle: "JavaScript",
-    stackPart: "frontend",
+    stackPart: "language",
     iconName: "javascript",
   },
   {
     iconTitle: "TypeScript",
-    stackPart: "frontend",
+    stackPart: "language",
     iconName: "typescript",
   },
   {
@@ -43,17 +43,17 @@ export const TECHNOLOGIES = [
   },
   {
     iconTitle: "Elixir",
-    stackPart: "backend",
+    stackPart: "language",
     iconName: "elixir",
   },
   {
     iconTitle: "C",
-    stackPart: "backend",
+    stackPart: "language",
     iconName: "c",
   },
   {
     iconTitle: "Rust",
-    stackPart: "backend",
+    stackPart: "language",
     iconName: "rust",
   },
   {
