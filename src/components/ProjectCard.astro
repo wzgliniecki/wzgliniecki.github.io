@@ -39,7 +39,7 @@ import TechnologiesBar from "./TechnologiesBar.astro";
               class="flex justify-center items-center text-text dark:text-darkText hover:underline "
             >
               <Github class="w-6 h-6" />
-              Repository
+              {!!repositoryLinks ? "Repository" : "Private"}
             </a>
           
       </button>

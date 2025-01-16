@@ -52,6 +52,11 @@ export const TECHNOLOGIES = [
     iconName: "c",
   },
   {
+    iconTitle: "csharp",
+    stackPart: "language",
+    iconName: "csharp",
+  },
+  {
     iconTitle: "Rust",
     stackPart: "language",
     iconName: "rust",
