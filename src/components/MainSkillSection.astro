@@ -1,14 +1,10 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-const pageTitle = "Skills";
 import SkillSection from "../components/SkillSection.astro";
 ---
 
-<MainLayout pageTitle={pageTitle}>
-  <div class="grid grid-cols-2 grid-rows-2 gap-6 p-4 h-[60vh]">
+  <div class="grid grid-cols-2 grid-rows-2 gap-6 p-4 h-[60vh] min-h-screen" id="skills">
       <SkillSection stackPart={"language"} sectionTitle={"LANGUAGES"} />
       <SkillSection stackPart={"backend"} sectionTitle={"BACKEND"} />
       <SkillSection stackPart={"frontend"} sectionTitle={"FRONTEND"} />
       <SkillSection stackPart={"other"} sectionTitle={"OTHER"} />
   </div>
-</MainLayout>

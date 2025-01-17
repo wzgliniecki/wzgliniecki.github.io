@@ -6,9 +6,8 @@ const pageTitle = "Projects";
 const allProjects = await Astro.glob("../pages/projects/*.mdx");
 ---
 
-<MainLayout pageTitle={pageTitle}>
   <div
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 min-h-screen" id="projects"
   >
     {
       allProjects
@@ -27,4 +26,3 @@ const allProjects = await Astro.glob("../pages/projects/*.mdx");
         })
     }
   </div>
-</MainLayout>
