@@ -18,6 +18,7 @@ import TechnologiesBar from "./TechnologiesBar.astro";
 >
   <a href={`/projects/${projectSlug}`} class="block cursor-pointer">
     <img
+      loading="lazy"
       src={`/images/projects/logos/${projectLogo ?? "placeholder.svg"}`}
       alt={projectTitle}
       class="mx-auto h-auto w-auto object-contain mb-2 mt-2"
