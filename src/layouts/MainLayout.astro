@@ -47,15 +47,8 @@ import { SEO } from "astro-seo";
       Skip to main content
     </a>
     <Header />
-    <main id="main" class="max-w-7xl mx-auto px-6 py-12">
-      <h1
-        class="text-3xl font-extrabold text-center text-primary mb-6"
-      >
-        {pageTitle}
-      </h1>
-      <div class="max-w-full">
+    <main id="main" class="min-w-100 mx-auto px-6 py-12 overflow-y-scroll h-screen snap-y snap-mandatory">
         <slot />
-      </div>
     </main>
   </body>
 </html>

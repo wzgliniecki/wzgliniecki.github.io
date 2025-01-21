@@ -1,12 +1,13 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import ProjectsSection from "../components/ProjectsSection.astro"
 import SkillSection from "../components/SkillSection.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+const allProjects = await Astro.glob("../pages/projects/*.mdx");
 const pageTitle = "WELCOME TO MY PORTFOLIO!";
 ---
 
 <MainLayout pageTitle={pageTitle}>
-    <div class="min-h-screen" id="about">
+    <div class="min-h-screen snap-center" id="about">
         <h2 class="text-2xl font-extrabold text-center text-primary text-text dark:text-darkText mb-6">Software Developer</h2>
         <h2 class="text-2xl font-extrabold text-center text-primary text-text dark:text-darkText mb-6">Economist</h2>
         <h2 class="text-2xl font-extrabold text-center text-primary text-text dark:text-darkText mb-6">Engineer</h2>
@@ -17,5 +18,22 @@ const pageTitle = "WELCOME TO MY PORTFOLIO!";
             <SkillSection stackPart={"other"} sectionTitle={"OTHER"} />
         </div>      
     </div>
-    <ProjectsSection/>
+          {
+            allProjects
+              .filter((project) => project.frontmatter.isPrivate === false)
+              .map((project) => {
+                const projectSlug = project.url.split("/").pop().replace(".md", "");
+                return (
+                 <div class="min-h-screen snap-center">
+                  <ProjectCard
+                    projectTitle={project.frontmatter.projectTitle}
+                    projectLogo={project.frontmatter.projectLogo}
+                    repositoryLinks={project.frontmatter.repositoryLinks}
+                    projectSlug={projectSlug}
+                    technologiesList={project.frontmatter.technologiesList}
+                  />
+                  </div>
+                );
+              })
+          }
 </MainLayout>
