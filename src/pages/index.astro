@@ -24,15 +24,18 @@ const pageTitle = "WELCOME TO MY PORTFOLIO!";
               .map((project) => {
                 const projectSlug = project.url.split("/").pop().replace(".md", "");
                 return (
-                 <div class="min-h-screen snap-center">
-                  <ProjectCard
-                    projectTitle={project.frontmatter.projectTitle}
-                    projectLogo={project.frontmatter.projectLogo}
-                    repositoryLinks={project.frontmatter.repositoryLinks}
-                    projectSlug={projectSlug}
-                    technologiesList={project.frontmatter.technologiesList}
-                  />
-                  </div>
+                <div class="min-h-screen snap-center">
+                    <div class="min-h-80">
+                        <ProjectCard
+                            projectTitle={project.frontmatter.projectTitle}
+                            projectLogo={project.frontmatter.projectLogo}
+                            featuresList={project.frontmatter.featuresList}
+                            repositoryLinks={project.frontmatter.repositoryLinks}
+                            projectSlug={projectSlug}
+                            technologiesList={project.frontmatter.technologiesList}
+                        />
+                    </div>
+                </div>
                 );
               })
           }
