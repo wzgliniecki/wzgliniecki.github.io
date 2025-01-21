@@ -4,17 +4,19 @@ import ProjectCard from "../components/ProjectCard.astro";
 const pageTitle = "Projects";
 const allProjects = await Astro.glob("../pages/projects/*.mdx");
 const cardStyles = [
-  'col-span-2 row-span-1',
-  'col-span-2 row-span-1',
-  'col-span-1 row-span-4',
-  'col-span-2 row-span-2',
-  'col-span-1 row-span-2',
-  'col-span-3 row-span-2'
+  "col-span-2 row-span-1",
+  "col-span-2 row-span-1",
+  "col-span-1 row-span-4",
+  "col-span-2 row-span-2",
+  "col-span-1 row-span-2",
+  "col-span-3 row-span-2",
 ];
 ---
+
 <div class="flex items-center justify-center w-full h-full snap-center">
   <div
-    class="grid grid-cols-4 grid-rows-4 gap-4 p-2 rounded-lg shadow-lg max-h-full" id="projects"
+    class="grid grid-cols-4 grid-rows-4 gap-4 p-2 rounded-lg shadow-lg max-h-full"
+    id="projects"
   >
     {
       allProjects
@@ -29,7 +31,14 @@ const cardStyles = [
               repositoryLinks={project.frontmatter.repositoryLinks}
               projectSlug={projectSlug}
               technologiesList={project.frontmatter.technologiesList}
-              className={cardStyles[styleIndex]} // Apply a different style to each card
+              className={cardStyles[styleIndex]}
+              Apply
+              a
+              different
+              style
+              to
+              each
+              card
             />
           );
         })

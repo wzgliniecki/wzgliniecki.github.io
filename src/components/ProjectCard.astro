@@ -8,7 +8,7 @@ const {
   projectSlug,
   featuresList,
   technologiesList,
-  className
+  className,
 } = Astro.props;
 import { Github, MonitorPlay } from "lucide-astro";
 import TechnologiesBar from "./TechnologiesBar.astro";
@@ -17,63 +17,75 @@ import TechnologiesBar from "./TechnologiesBar.astro";
 <div
   class={`bg-white dark:text-gray-800 border-black border-2 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] text-center grid min-h-80 w-full gap-4  p-2 grid-cols-4 grid-rows-4 rounded-lg shadow-md ${className}`}
 >
-  <div class="col-span-4 row-span-1 bg-gray-200 rounded-lg shadow-md flex items-center justify-center">
+  <div
+    class="col-span-4 row-span-1 bg-gray-200 rounded-lg shadow-md flex items-center justify-center"
+  >
     <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-800">
       {projectTitle}
     </h2>
   </div>
 
-  <div class="col-span-1 row-span-4 bg-gray-200 rounded-lg shadow-md flex items-center justify-center">
-      <img
-        loading="lazy"
-        src={`/images/projects/logos/${projectLogo ?? "placeholder.svg"}`}
-        alt={projectTitle}
-        class="mx-auto h-auto w-auto object-contain mb-2 mt-2"
-      />
+  <div
+    class="col-span-1 row-span-4 bg-gray-200 rounded-lg shadow-md flex items-center justify-center"
+  >
+    <img
+      loading="lazy"
+      src={`/images/projects/logos/${projectLogo ?? "placeholder.svg"}`}
+      alt={projectTitle}
+      class="mx-auto h-auto w-auto object-contain mb-2 mt-2"
+    />
   </div>
 
-  <div class="col-span-2 row-span-2 bg-gray-200 rounded-lg shadow-md flex items-center justify-center">
+  <div
+    class="col-span-2 row-span-2 bg-gray-200 rounded-lg shadow-md flex items-center justify-center"
+  >
     <ul class="space-y-2">
-      {featuresList.map((feature: any) => (
-        <li class="text-lg text-gray-800">{feature}</li>
-      ))}
+      {
+        featuresList.map((feature: any) => (
+          <li class="text-lg text-gray-800">{feature}</li>
+        ))
+      }
     </ul>
   </div>
 
-  <div class="col-span-1 row-span-2 bg-gray-200 rounded-lg shadow-md flex items-center justify-center">
-    <button type="button"
+  <div
+    class="col-span-1 row-span-2 bg-gray-200 rounded-lg shadow-md flex items-center justify-center"
+  >
+    <button
+      type="button"
       class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-boxShadow bg-button hover:bg-buttonHover active:bg-buttonActive h-10 w-1/2"
     >
       <a
         href={repositoryLinks}
         target="_blank"
-        class="flex justify-center items-center text-text dark:text-darkText hover:underline "
+        class="flex justify-center items-center text-text dark:text-darkText hover:underline"
       >
         <Github class="w-6 h-6" />
         {!!repositoryLinks ? "Repository" : "Private"}
       </a>
-  
     </button>
-    <button type="button"
+    <button
+      type="button"
       class="flex justify-center p-2 rounded-lg border-black border-2 hover:shadow-boxShadow bg-button hover:bg-buttonHover active:bg-buttonActive h-10 w-1/2"
     >
-          <a
-            href={repositoryLinks}
-            target="_blank"
-            class="flex justify-center items-center text-text dark:text-darkText hover:underline"
-          >
-            <MonitorPlay class="w-6 h-6"/>
-            Demo
-          </a>
+      <a
+        href={repositoryLinks}
+        target="_blank"
+        class="flex justify-center items-center text-text dark:text-darkText hover:underline"
+      >
+        <MonitorPlay class="w-6 h-6" />
+        Demo
+      </a>
     </button>
   </div>
 
-  <div class="col-span-3 row-span-2 bg-gray-200 rounded-lg shadow-md flex items-center justify-center">
+  <div
+    class="col-span-3 row-span-2 bg-gray-200 rounded-lg shadow-md flex items-center justify-center"
+  >
     {
       !!technologiesList && (
         <TechnologiesBar technologiesList={technologiesList} />
       )
     }
   </div>
-
 </div>

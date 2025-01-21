@@ -1,4 +1,5 @@
-{"files.associations": {
-  "*.mjs": "javascript"
-}
+{
+  "files.associations": {
+    "*.mjs": "javascript"
+  }
 }

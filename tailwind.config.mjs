@@ -9,9 +9,9 @@ export default {
         overlay: "rgba(0,0,0,0.8)",
 
         // buttons
-        button: '#DC2626',
-        buttonHover: '#fa8cef',
-        buttonActive: '#f774ea',
+        button: "#DC2626",
+        buttonHover: "#fa8cef",
+        buttonActive: "#f774ea",
 
         // light mode
         bg: "#020617",
@@ -28,7 +28,7 @@ export default {
         base: "19px",
       },
       boxShadow: {
-        'boxShadow': '3px 3px 0px rgba(0, 0, 0, 1)',
+        boxShadow: "3px 3px 0px rgba(0, 0, 0, 1)",
       },
       translate: {
         boxShadowX: "6px",
@@ -41,12 +41,10 @@ export default {
         heading: "900",
       },
       fontFamily: {
-        sans: ['Public Sans', 'sans-serif'],
+        sans: ["Public Sans", "sans-serif"],
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
+  plugins: [require("@tailwindcss/typography")],
   darkMode: "class",
 };

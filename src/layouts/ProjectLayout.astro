@@ -10,15 +10,29 @@ import { Github, MonitorPlay } from "lucide-astro";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
-    <link rel="manifest" href="../images/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../images/site.webmanifest" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link
-    href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@700&display=swap"
-    rel="stylesheet"
-  />
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <ViewTransitions />
     <title>{frontmatter.projectTitle}</title>
   </head>
@@ -40,38 +54,36 @@ import { Github, MonitorPlay } from "lucide-astro";
         {frontmatter.projectTitle}
       </h1>
       <div class="flex row place-content-center content-between">
-      <button
-      type="button"
-      class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-boxShadow bg-button hover:bg-buttonHover active:bg-buttonActive h-10 w-25"
-    >
+        <button
+          type="button"
+          class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-boxShadow bg-button hover:bg-buttonHover active:bg-buttonActive h-10 w-25"
+        >
           <a
             href={frontmatter.repositoryLinks}
             target="_blank"
-            class="flex justify-center items-center text-black  hover:underline "
+            class="flex justify-center items-center text-black hover:underline"
           >
             <Github class="w-6 h-6" />
             Repository
           </a>
-        
-    </button>
-    <button
-        type="button"
-        class="flex justify-center p-2 rounded-lg border-black border-2 hover:shadow-boxShadow bg-button hover:bg-buttonHover active:bg-buttonActive h-10 w-25"
-      >
-            <a
-              href={frontmatter.repositoryLinks}
-              target="_blank"
-              class="flex justify-center items-center text-black hover:underline"
-            >
-              <MonitorPlay class="w-6 h-6"/>
-              Demo
-            </a>
-      </button>
-      </div>
-      </br>
-      <div class="prose max-w-full text-text dark:text-darkText">
-        <slot />
+        </button>
+        <button
+          type="button"
+          class="flex justify-center p-2 rounded-lg border-black border-2 hover:shadow-boxShadow bg-button hover:bg-buttonHover active:bg-buttonActive h-10 w-25"
+        >
+          <a
+            href={frontmatter.repositoryLinks}
+            target="_blank"
+            class="flex justify-center items-center text-black hover:underline"
+          >
+            <MonitorPlay class="w-6 h-6" />
+            Demo
+          </a>
+        </button>
       </div>
     </main>
+    <div class="prose max-w-full text-text dark:text-darkText">
+      <slot />
+    </div>
   </body>
 </html>
