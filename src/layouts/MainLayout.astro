@@ -1,7 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 const { pageTitle } = Astro.props;
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from 'astro:transitions';
 import { SEO } from "astro-seo";
 ---
 
@@ -47,7 +47,7 @@ import { SEO } from "astro-seo";
       href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@700&display=swap"
       rel="stylesheet"
     />
-    <ViewTransitions />
+    <ClientRouter />
     <title>{pageTitle}</title>
   </head>
 
