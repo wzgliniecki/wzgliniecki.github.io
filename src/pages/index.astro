@@ -35,6 +35,7 @@ const pageTitle = "WELCOME TO MY PORTFOLIO!";
       .filter((project) => project.frontmatter.isPrivate === false)
       .map((project) => {
         const projectSlug = project.url.split("/").pop().replace(".md", "");
+        console.log(project.frontmatter);
         return (
           <div class="min-h-screen snap-center">
             <div class="min-h-80">
@@ -42,9 +43,10 @@ const pageTitle = "WELCOME TO MY PORTFOLIO!";
                 projectTitle={project.frontmatter.projectTitle}
                 projectLogo={project.frontmatter.projectLogo}
                 featuresList={project.frontmatter.featuresList}
-                repositoryLinks={project.frontmatter.repositoryLinks}
-                projectSlug={projectSlug}
+                mainRepo={project.frontmatter.mainRepo}
+                demoLink={project.frontmatter.demoLink}
                 technologiesList={project.frontmatter.technologiesList}
+                projectDescription={project.frontmatter.description}
               />
             </div>
           </div>

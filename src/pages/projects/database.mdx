@@ -1,31 +1,10 @@
 ---
 projectTitle: "Clone DB"
-technologiesList: ["Python", "WebSockets", "WSGI", "ASGI"]
-projectLogo: null
-repositoryLinks: ["https://github.com/wzgliniecki/clonedb"]
+technologiesList: ["Python"]
+mainRepo: ["https://github.com/wzgliniecki/clonedb"]
+additionalRepos: []
 isPrivate: false
 isWorkInProgress: true
-layout: ../../layouts/ProjectLayout.astro
-featuresList: ["Modular Design: The system’s modular structure allows for customization and scalability, making it adaptable to different health insurance programs and regulations.",
-"User-Friendly Interface: Designed to provide a seamless experience for both administrators and users, ensuring that health insurance schemes are easy to manage and use.",
-"Data Management: Facilitates the collection, storage, and analysis of health insurance data, enabling informed decision-making and the development of effective policies.",
-"Integration Capabilities: OpenIMIS is compatible with a variety of health information systems and technologies, ensuring smooth integration with existing infrastructure."
-]
+featuresList: [ "WebSockets", "WSGI", "ASGI"]
+description: "Bomberman game written in Godot."
 ---
-
-## Project Overview
-
-**Clone DB** is a database implementation built entirely in **Python**, inspired by two tutorials that originally provided insights into creating a database in **C**. This project aims to replicate the functionality of **SQLite**, but with added capabilities for modern web interactions.
-
-The goal is to create a lightweight, custom database that is capable of handling connections via **WebSockets**, while being compatible with both **WSGI** and **ASGI** protocols. These protocols allow for synchronous and asynchronous communication between the server and clients, making Clone DB highly scalable for web applications.
-
-Clone DB is based on two main tutorials:
-
-1. [CStack DB Tutorial (Part 1)](https://cstack.github.io/db_tutorial/parts/part1.html): This comprehensive guide covers the fundamentals of building a simple database engine in C.
-2. [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/): This resource teaches network programming and provides insights into implementing socket-based communication, which is a core part of Clone DB's WebSocket support.
-
-### Key Features
-
-- **WebSocket Support:** Provides real-time, bidirectional communication between clients and the database. Ideal for applications requiring live data updates or continuous interactions.
-- **WSGI and ASGI Compatibility:** Supports both synchronous (WSGI) and asynchronous (ASGI) Python web frameworks, offering flexibility for various server-side architectures.
-- **SQL Database Engine:** Implements core database functionalities similar to SQLite, including storing, retrieving, and managing data in a compact, file-based format.

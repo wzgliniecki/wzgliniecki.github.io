@@ -2,13 +2,12 @@
 const {
   projectTitle,
   projectLogo,
-  isPrivate,
-  isWorkInProgress,
-  repositoryLinks,
-  projectSlug,
+  mainRepo,
   featuresList,
+  demoLink,
   technologiesList,
   className,
+  projectDescription
 } = Astro.props;
 import { Github, MonitorPlay } from "lucide-astro";
 import TechnologiesBar from "./TechnologiesBar.astro";
@@ -49,19 +48,29 @@ import TechnologiesBar from "./TechnologiesBar.astro";
   </div>
 
   <div
-    class="col-span-1 row-span-2 bg-gray-200 rounded-lg shadow-md flex items-center justify-center"
+  class="col-span-1 row-span-1 bg-gray-200 rounded-lg shadow-md flex items-center flex-col justify-center"
+  >
+  {
+    !!technologiesList && (
+      <TechnologiesBar technologiesList={technologiesList} />
+    )
+  }
+  </div>
+
+  <div
+    class="col-span-1 row-span-1 bg-gray-200 rounded-lg shadow-md flex items-center justify-center"
   >
     <button
       type="button"
       class="flex items-center justify-center p-2 rounded-lg border-black border-2 hover:shadow-boxShadow bg-button hover:bg-buttonHover active:bg-buttonActive h-10 w-1/2"
     >
       <a
-        href={repositoryLinks}
+        href={mainRepo}
         target="_blank"
         class="flex justify-center items-center text-text dark:text-darkText hover:underline"
       >
-        <Github class="w-6 h-6" />
-        {!!repositoryLinks ? "Repository" : "Private"}
+        <Github class="w-100 h-100" />
+        {!!mainRepo ? "Repository" : "Private"}
       </a>
     </button>
     <button
@@ -69,23 +78,19 @@ import TechnologiesBar from "./TechnologiesBar.astro";
       class="flex justify-center p-2 rounded-lg border-black border-2 hover:shadow-boxShadow bg-button hover:bg-buttonHover active:bg-buttonActive h-10 w-1/2"
     >
       <a
-        href={repositoryLinks}
+        href={demoLink}
         target="_blank"
         class="flex justify-center items-center text-text dark:text-darkText hover:underline"
       >
-        <MonitorPlay class="w-6 h-6" />
-        Demo
+        <MonitorPlay class="w-100 h-100" />
+        {!!demoLink ? "Demo" : "Private"}
       </a>
     </button>
   </div>
 
   <div
-    class="col-span-3 row-span-2 bg-gray-200 rounded-lg shadow-md flex items-center justify-center"
+    class="col-span-3 row-span-2 bg-gray-200 rounded-lg shadow-md flex items-center justify-center text-gray-800"
   >
-    {
-      !!technologiesList && (
-        <TechnologiesBar technologiesList={technologiesList} />
-      )
-    }
+    {projectDescription}
   </div>
 </div>
