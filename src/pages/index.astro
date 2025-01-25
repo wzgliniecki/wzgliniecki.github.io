@@ -5,37 +5,66 @@ import ProjectCard from "../components/ProjectCard.astro";
 const allProjects = await Astro.glob("../pages/projects/*.mdx");
 const pageTitle = "WELCOME TO MY PORTFOLIO!";
 ---
+<style>
+  .neonText {
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+  }
+
+  /* Color utilities for reuse */
+  .neonGreen {
+    color: #0fa;
+  }
+
+  .neonYellow {
+    color: #e4f311;
+  }
+
+  .neonBlue {
+    color: #120ec9;
+  }
+</style>
 
 <MainLayout pageTitle={pageTitle}>
-  <div class="min-h-screen snap-center" id="about">
-    <h2
-      class="text-2xl font-extrabold text-center text-primary text-text dark:text-darkText mb-6"
-    >
-      Software Developer
-    </h2>
-    <h2
-      class="text-2xl font-extrabold text-center text-primary text-text dark:text-darkText mb-6"
-    >
-      Economist
-    </h2>
-    <h2
-      class="text-2xl font-extrabold text-center text-primary text-text dark:text-darkText mb-6"
-    >
-      Engineer
-    </h2>
-    <div class="grid grid-cols-2 grid-rows-2 gap-6 p-4 h-[30vh]">
-      <SkillSection stackPart={"language"} sectionTitle={"LANGUAGES"} />
-      <SkillSection stackPart={"backend"} sectionTitle={"BACKEND"} />
-      <SkillSection stackPart={"frontend"} sectionTitle={"FRONTEND"} />
-      <SkillSection stackPart={"other"} sectionTitle={"OTHER"} />
+  <div class="min-h-screen flex items-center justify-center snap-center" id="about">
+    <div class="relative inline-block text-center">
+      <h1 class="w-fit h-auto py-4 bg-gradient-to-r from-blue-500 via-teal-500 to-pink-500 bg-clip-text text-6xl font-extrabold text-transparent select-auto">
+        WOJCIECH ZGLINIECKI
+      </h1>
+  
+      <h2 class="absolute bottom-0 left-0 text-2xl font-extrabold text-center text-primary neonText neonGreen transform translate-y-2">
+        Software Developer
+      </h2>
+      <h2 class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-2xl font-extrabold text-center text-primary text-text dark:text-darkText neonText neonBlue translate-y-2">
+        Economist
+      </h2>
+      <h2 class="absolute bottom-0 right-0 text-2xl font-extrabold text-center text-primary text-text dark:text-darkText neonText neonYellow transform translate-y-2">
+        Engineer
+      </h2>
     </div>
+  </div>
+  
+
+  <div class="min-h-screen flex items-center justify-center snap-center"  id="about">
+      <div class="grid grid-cols-2 grid-rows-2 gap-6 p-4 h-[30vh]">
+        <SkillSection stackPart={"language"} sectionTitle={"LANGUAGES"} />
+        <SkillSection stackPart={"backend"} sectionTitle={"BACKEND"} />
+        <SkillSection stackPart={"frontend"} sectionTitle={"FRONTEND"} />
+        <SkillSection stackPart={"other"} sectionTitle={"OTHER"} />
+      </div>
   </div>
   {
     allProjects
       .filter((project) => project.frontmatter.isPrivate === false)
       .map((project) => {
         const projectSlug = project.url.split("/").pop().replace(".md", "");
-        console.log(project.frontmatter);
         return (
           <div class="min-h-screen snap-center">
             <div class="min-h-80">
