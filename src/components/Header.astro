@@ -1,15 +1,9 @@
 ---
 import { MoonStar, Sun, Linkedin, Github } from "lucide-astro";
-
-// const buttonClasses = "p-2 rounded-lg border-button border-2 shadow-boxShadow bg-button hover:bg-buttonHover active:bg-buttonActive";
-// const buttonAfterClasses = "after:content-['d'] after-absolute after-top-0 after-bottom-0 after-left-0 after-right-0 after-box-shadow-[0_0_2em_0.5em_var(--clr-button)] after-opacity-0 after-bg-[var(--clr-button)] after-z-[-1] after-transition-opacity after-duration-[100ms] after-ease-linear";
-// const buttonBeforeClasses = "before:content-['d'] before-absolute before-top-[120%] before-left-0 before-w-full before-h-full before-bg-[var(--clr-button)] before-transform before-perspective-[1em] before-rotate-x-[40deg] before-scale-y-[0.35] before-filter before-blur-[1em] before-opacity-[0.7] before-pointer-events-none";
-
-// const combinedButtonClasses = `${buttonClasses} ${buttonAfterClasses} ${buttonBeforeClasses}`;
 ---
 
-<header class="w-1/3 mx-auto mt-5 text-center sticky top-0 z-10">
-  <nav class="flex items-center justify-between h-20 px-6">
+<header class="w-1/3 mx-auto mt-5 text-center fixed top-0 left-1/2 transform -translate-x-1/2 z-10">
+    <nav class="flex items-center justify-between h-20 px-6">
     <div class="flex space-x-6 text-text dark:text-darkText">
       <button
         type="button"
@@ -17,6 +11,12 @@ import { MoonStar, Sun, Linkedin, Github } from "lucide-astro";
       >
         <a href="#about">ABOUT</a>
       </button>
+      <button
+      type="button"
+      class="flex items-center justify-center p-2 rounded-lg border-black border-2 shadow-boxShadow bg-button hover:bg-buttonHover active:bg-buttonActive"
+    >
+      <a href="#skills">SKILLS</a>
+    </button>
       <button
         type="button"
         class="flex items-center justify-center p-2 rounded-lg border-black border-2 shadow-boxShadow bg-button hover:bg-buttonHover active:bg-buttonActive"
