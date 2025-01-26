@@ -2,52 +2,49 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import SkillSection from "../components/SkillSection.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import { MoonStar, Sun, Linkedin, Github } from "lucide-astro";
 const allProjects = await Astro.glob("../pages/projects/*.mdx");
 const pageTitle = "WELCOME TO MY PORTFOLIO!";
 ---
-<style>
-  .neonText {
-    text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px #0fa,
-      0 0 82px #0fa,
-      0 0 92px #0fa,
-      0 0 102px #0fa,
-      0 0 151px #0fa;
-  }
-
-  /* Color utilities for reuse */
-  .neonGreen {
-    color: #0fa;
-  }
-
-  .neonYellow {
-    color: #e4f311;
-  }
-
-  .neonBlue {
-    color: #120ec9;
-  }
-</style>
-
 <MainLayout pageTitle={pageTitle}>
   <div class="min-h-screen flex items-center justify-center snap-center" id="about">
-    <div class="relative inline-block text-center">
+    <div class="flex flex-col text-center gap-y-20">
+      <div>
       <h1 class="text-8xl sm:text-9xl font-extrabold bg-gradient-to-r from-blue-500 via-teal-500 to-pink-500 bg-clip-text text-transparent select-auto">
         Wojciech<br>Zgliniecki
       </h1>
-  
-      <h2 class="absolute bottom-0 left-0 text-2xl font-extrabold text-center text-primary neonText neonGreen transform translate-y-2">
-        Software Developer
-      </h2>
-      <h2 class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-2xl font-extrabold text-center text-primary dark:text-darkText neonText neonBlue translate-y-2">
-        Economist
-      </h2>
-      <h2 class="absolute bottom-0 right-0 text-2xl font-extrabold text-center text-primary dark:text-darkText neonText neonYellow transform translate-y-2">
-        Engineer
-      </h2>
+      </div>
+      <div class="flex justify-center items-center gap-4">
+        <div class="mockup-code text-left">
+          <pre data-prefix="$"><code>Software Developer</code></pre>
+          <pre data-prefix=">" class="text-warning"><code>Main Technologies: </code></pre>
+          <pre data-prefix=">" class="text-success"><code>["Python", "Django", "TS", "React"]</code></pre>
+        </div>
+        <div class="mockup-code text-left">
+          <pre data-prefix="$"><code>Economist</code></pre>
+          <pre data-prefix=">" class="text-warning"><code>Gdańsk University of Technology</code></pre>
+          <pre data-prefix=">" class="text-success"><code>Faculty of Economics</code></pre>
+        </div>
+        <div class="mockup-code text-left">
+          <pre data-prefix="$"><code>Control Engineer</code></pre>
+          <pre data-prefix=">" class="text-warning"><code>Gdańsk University of Technology</code></pre>
+          <pre data-prefix=">" class="text-success"><code>Faculty of Electronics</code></pre>
+        </div>
+      </div>
+      <div>
+        <div class="badge badge-info gap-2">
+          <a
+          class="flex flex-row"
+          href="https://pl.linkedin.com/in/wojciech-zgliniecki-1279a1166"
+          aria-label="My LinkedIn profile"><Linkedin />Linkedin</a>
+        </div>
+        <div class="badge badge-success gap-2">
+          <a
+          class="flex flex-row"
+          href="https://github.com/wzgliniecki/"
+          aria-label="My LinkedIn profile"><Github />Github</a>
+        </div>
+      </div>
     </div>
   </div>
   
@@ -60,6 +57,7 @@ const pageTitle = "WELCOME TO MY PORTFOLIO!";
         <SkillSection stackPart={"other"} sectionTitle={"OTHER"} />
       </div>
   </div>
+  <div id="projects">
   {
     allProjects
       .filter((project) => project.frontmatter.isPrivate === false)
@@ -82,4 +80,5 @@ const pageTitle = "WELCOME TO MY PORTFOLIO!";
         );
       })
   }
+  </div>
 </MainLayout>
