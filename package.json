@@ -16,6 +16,7 @@
     "astro": "^5.1.8",
     "astro-icon": "^1.1.2",
     "astro-seo": "^0.8.4",
+    "daisyui": "^4.12.23",
     "lucide-astro": "^0.456.0",
     "motion": "^11.11.17",
     "tailwindcss": "^3.4.7"
