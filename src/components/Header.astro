@@ -35,16 +35,19 @@ import { MoonStar, Sun, Linkedin, Github } from "lucide-astro";
         href="https://github.com/wzgliniecki/"
         aria-label="My GitHub profile"><Github /></a
       >
-      <button
-        type="button"
-        id="theme-selector"
-        class="flex items-center justify-center p-2 rounded-lg border-black border-2 shadow-boxShadow bg-button hover:bg-buttonHover active:bg-buttonActive w-10 h-10"
-        aria-label="Toggle Theme"
-      >
-        <MoonStar class="h-6 w-6 dark:hidden" />
-        <Sun class="hidden dark:inline h-6 w-6" />
-      </button>
-    </div>
+      <label class="grid cursor-pointer place-items-center">
+        <div class="flex items-center">
+          <Sun class="mr-2" />
+          <input
+            type="checkbox"
+            value="light"
+            id="theme-selector"
+            aria-label="Toggle Theme"
+            class="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1" />
+          <MoonStar class="ml-2" />
+        </div>
+      </label>
+    </div>    
   </nav>
 </header>
 
