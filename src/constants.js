@@ -131,4 +131,9 @@ export const TECHNOLOGIES = [
     stackPart: "frontend",
     iconName: "vite",
   },
+  {
+    iconTitle: "DaisyUI",
+    stackPart: "frontend",
+    iconName: "daisyui",
+  },
 ];
