@@ -6,7 +6,7 @@ import IconWrapper from "../components/IconWrapper.astro";
 
 <div class="card w-full bg-base-100 shadow-xl">
   <div class="card-body z-auto overflow-hidden relative">
-    <h2 class="z-10 text-5xl transform -rotate-45 absolute bottom-20 right-25 opacity-25">
+    <h2 class="z-10 text-2xl lg:text-5xl transform -rotate-45 absolute bottom-0.5 right-0.5 lg:bottom-20 lg:right-25 opacity-25">
       {sectionTitle}
     </h2>
     <ul class="space-y-2 z-20">
@@ -17,7 +17,7 @@ import IconWrapper from "../components/IconWrapper.astro";
             return (
               <li class="flex items-center space-x-3">
                 <IconWrapper iconName={tech.iconName}   class={"w-8 h-8 dark:text-gray-700"}/>
-                <span class="text-lg font-medium dark:text-gray-700">{tech.iconTitle}</span>
+                <span class="text-lg font-medium dark:text-gray-700 hidden sm:block">{tech.iconTitle}</span>
               </li>
             );
           })
