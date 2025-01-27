@@ -24,20 +24,23 @@ const allProjects = await Astro.glob("../pages/projects/*.mdx");
           </svg>
         </div>
         <ul
-          tabindex="0"
           class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
         >
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#about" aria-label="About">ABOUT</a></li>
+          <li><a href="#skills" aria-label="Skills">SKILLS</a></li>
           <li>
-            <a>PROJECTS</a>
+            <a href="#projects" aria-label="Projects">PROJECTS</a>
             <ul class="p-2">
               {
                 allProjects
                   .filter((project) => project.frontmatter.isPrivate === false)
                   .map((project) => {
                     return (
-                    <li><a href={`#${project.frontmatter.projectTitle}`}>{project.frontmatter.projectTitle}</a></li>
+                    <li>
+                      <a href={`#${project.frontmatter.projectTitle}`} aria-label={`${project.frontmatter.projectTitle}`}>
+                        {project.frontmatter.projectTitle}
+                      </a>
+                    </li>
                     );
                   })
               }
@@ -49,11 +52,11 @@ const allProjects = await Astro.glob("../pages/projects/*.mdx");
     
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#about" aria-label="About">ABOUT</a></li>
+        <li><a href="#skills" aria-label="Skills">SKILLS</a></li>
         <li>
           <details class="group">
-            <summary class="cursor-pointer">PROJECTS</summary>
+            <summary class="cursor-pointer" aria-label="Projects">PROJECTS</summary>
             <ul class="p-2">
               <ul class="p-2">
               {
@@ -61,7 +64,11 @@ const allProjects = await Astro.glob("../pages/projects/*.mdx");
                   .filter((project) => project.frontmatter.isPrivate === false)
                   .map((project) => {
                     return (
-                    <li><a href={`#${project.frontmatter.projectTitle}`}>{project.frontmatter.projectTitle}</a></li>
+                    <li>
+                      <a href={`#${project.frontmatter.projectTitle}`} aria-label={`${project.frontmatter.projectTitle}`}>
+                        {project.frontmatter.projectTitle}
+                      </a>
+                    </li>
                     );
                   })
               }
