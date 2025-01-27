@@ -10,11 +10,11 @@ const pageTitle = "WELCOME TO MY PORTFOLIO!";
   <div class="min-h-screen flex items-center justify-center snap-center" id="about">
     <div class="flex flex-col text-center gap-y-20">
       <div>
-      <h1 class="text-8xl sm:text-9xl font-extrabold bg-gradient-to-r from-blue-500 via-teal-500 to-pink-500 bg-clip-text text-transparent select-auto">
+      <h1 class="text-6xl md:text-8xl font-extrabold bg-gradient-to-r from-blue-500 via-teal-500 to-pink-500 bg-clip-text text-transparent select-auto">
         Wojciech<br>Zgliniecki
       </h1>
       </div>
-      <div class="flex justify-center items-center gap-4">
+      <div class="justify-center items-center gap-4 hidden md:flex">
         <div class="mockup-code text-left">
           <pre data-prefix="$"><code>Software Developer</code></pre>
           <pre data-prefix=">" class="text-warning"><code>Main Technologies: </code></pre>
@@ -31,19 +31,21 @@ const pageTitle = "WELCOME TO MY PORTFOLIO!";
           <pre data-prefix=">" class="text-success"><code>Faculty of Electronics</code></pre>
         </div>
       </div>
-      <div>
-        <div class="badge badge-info gap-2">
+      
+      <div class="mockup-code text-left flex flex-col md:hidden">
+        <pre data-prefix="$"><code>Software Developer</code></pre>
+        <pre data-prefix="$"><code>Control Engineer</code></pre>
+        <pre data-prefix="$"><code>Economist</code></pre>
+      </div>      
+
+      <div class="flex flex-row justify-evenly">
           <a
-          class="flex flex-row"
           href="https://pl.linkedin.com/in/wojciech-zgliniecki-1279a1166"
-          aria-label="My LinkedIn profile"><Linkedin />Linkedin</a>
-        </div>
-        <div class="badge badge-success gap-2">
+          aria-label="My LinkedIn profile"><Linkedin /></a>
+
           <a
-          class="flex flex-row"
           href="https://github.com/wzgliniecki/"
-          aria-label="My LinkedIn profile"><Github />Github</a>
-        </div>
+          aria-label="My LinkedIn profile"><Github /></a>
       </div>
     </div>
   </div>

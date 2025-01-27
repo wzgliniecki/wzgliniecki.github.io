@@ -46,6 +46,5 @@ export default {
     },
   },
   plugins: [require("@tailwindcss/typography"), require('daisyui')],
-  // plugins: [require('daisyui')], // Add DaisyUI plugin here
   darkMode: "class",
 };
