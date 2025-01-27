@@ -15,30 +15,28 @@ import TechnologiesBar from "./TechnologiesBar.astro";
 ---
 
 <div
-  class={`bg-white indicator dark:text-gray-800 border-black border-2 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] text-center grid min-h-80 w-full gap-4  p-2 grid-cols-4 grid-rows-4 rounded-lg shadow-md ${className}`}
+  class={`indicator dark:text-gray-800 border-black border-2 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] text-center grid min-h-80  max-h-100 w-full gap-4  p-2 grid-cols-4 grid-rows-4 rounded-lg shadow-md ${className}`}
 >
   {!!isWorkInProgress ? <span class="indicator-item badge badge-primary">Work In Progress</span> : <></>}
-  <div
+  <!-- <div
     class="col-span-4 row-span-1 bg-gray-200 rounded-lg shadow-md flex items-center justify-center"
-  >
-    <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-800">
-      {projectTitle}
-    </h2>
-  </div>
+  > -->
+  <!-- </div> -->
 
-  <div
-    class="col-span-1 row-span-4 bg-gray-200 rounded-lg shadow-md flex items-center justify-center"
-  >
+  <div class="col-span-1 row-span-4 bg-gray-200 rounded-lg shadow-md relative overflow-hidden p-5">
     <img
       loading="lazy"
       src={`/images/projects/logos/${projectLogo ?? "placeholder.svg"}`}
       alt={projectTitle}
-      class="mx-auto h-auto w-auto object-contain mb-2 mt-2"
+      class="w-full h-full object-contain rounded-lg"
     />
+    <h2 class="absolute top-2 left-1/2 transform -translate-x-1/2 text-xl font-semibold text-gray-800 dark:text-gray-800 bg-opacity-70 bg-gray-200 p-2 rounded-md">
+      {projectTitle}
+    </h2>
   </div>
-
+  
   <div
-    class="col-span-2 row-span-2 bg-gray-200 rounded-lg shadow-md flex items-center justify-center"
+    class="col-span-2 row-span-2 bg-gray-200 rounded-lg shadow-md flex items-center justify-center overflow-scroll"
   >
     <ul class="space-y-2">
       {
@@ -91,7 +89,7 @@ import TechnologiesBar from "./TechnologiesBar.astro";
   </div>
 
   <div
-    class="col-span-3 row-span-2 bg-gray-200 rounded-lg shadow-md flex items-center justify-center text-gray-800"
+    class="col-span-3 row-span-2 bg-gray-200 rounded-lg shadow-md flex items-center justify-center text-gray-800 overflow-scroll"
   >
     {projectDescription}
   </div>
