@@ -4,7 +4,7 @@ import { TECHNOLOGIES as allTechnologies } from "../constants.js";
 import IconWrapper from "../components/IconWrapper.astro";
 ---
 
-<div class="flex max-h-10 justify-center bg-main dark:bg-mainAccent">
+<div class="flex flex-wrap justify-center gap-4 max-w-full">
   {
     allTechnologies
       .filter((technology) =>
