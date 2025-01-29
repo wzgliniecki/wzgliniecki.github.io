@@ -4,44 +4,44 @@ export default {
   theme: {
     extend: {
       colors: {
-        main: "#88aaee",
-        mainAccent: "#4d80e6",
-        overlay: "rgba(0,0,0,0.8)",
+        main: "var(--main)",
+        mainAccent: "var(--mainAccent)",
+        overlay: "var(--overlay)",
 
         // buttons
-        button: "#DC2626",
-        buttonHover: "#fa8cef",
-        buttonActive: "#f774ea",
+        button: "var(--button)",
+        buttonHover: "var(--buttonHover)",
+        buttonActive: "var(--buttonActive)",
 
         // light mode
-        bg: "#020617",
-        text: "#DCFCE7",
-        border: "#22D3EE",
+        bg: "var(--bg)",
+        text: "var(--text)",
+        border: "var(--border)",
 
         // dark mode
-        darkBg: "#020617",
-        darkText: "#DCFCE7",
-        darkBorder: "#0369A1",
-        secondaryBlack: "#212121",
+        darkBg: "var(--darkBg)",
+        darkText: "var(--darkText)",
+        darkBorder: "var(--darkBorder)",
+        secondaryBlack: "var(--secondaryBlack)",
       },
       borderRadius: {
-        base: "19px",
+        base: "var(--base-radius)",
       },
       boxShadow: {
-        boxShadow: "3px 3px 0px rgba(0, 0, 0, 1)",
+        boxShadow: "var(--boxShadow)",
       },
       translate: {
-        boxShadowX: "6px",
-        boxShadowY: "6px",
-        reverseBoxShadowX: "-6px",
-        reverseBoxShadowY: "-6px",
+        boxShadowX: "var(--boxShadowX)",
+        boxShadowY: "var(--boxShadowY)",
+        reverseBoxShadowX: "var(--reverseBoxShadowX)",
+        reverseBoxShadowY: "var(--reverseBoxShadowY)",
       },
       fontWeight: {
-        base: "700",
-        heading: "900",
+        base: "var(--base-font-weight)",
+        heading: "var(--heading-font-weight)",
       },
       fontFamily: {
-        sans: ["Public Sans", "sans-serif"],
+        sans: "var(--sans-font)",
       },
     },
   },
