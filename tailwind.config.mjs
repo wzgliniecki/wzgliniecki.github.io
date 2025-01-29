@@ -45,6 +45,6 @@ export default {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography"), require('daisyui')],
+  plugins: [require('daisyui')],
   darkMode: "class",
 };

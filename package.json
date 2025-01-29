@@ -18,12 +18,10 @@
     "astro-seo": "^0.8.4",
     "daisyui": "^4.12.23",
     "lucide-astro": "^0.473.0",
-    "motion": "^11.11.17",
     "tailwindcss": "^3.4.7"
   },
   "devDependencies": {
     "@iconify-json/simple-icons": "^1.2.11",
-    "@tailwindcss/typography": "^0.5.15",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1"
   }
