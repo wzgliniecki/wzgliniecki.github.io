@@ -10,7 +10,7 @@ const {
   projectDescription,
   isWorkInProgress
 } = Astro.props;
-import { Github, MonitorPlay } from "lucide-astro";
+import IconWrapper from "../components/IconWrapper.astro";
 import TechnologiesBar from "./TechnologiesBar.astro";
 ---
 
@@ -55,7 +55,7 @@ import TechnologiesBar from "./TechnologiesBar.astro";
         aria-label="Github repository"
         class="flex justify-center items-center text-text dark:text-darkText hover:underline"
       >
-        <Github class="w-100 h-100" />
+        <IconWrapper iconSet="lucide" iconName="github" classes="w-100 h-100"/>
       </a>
     </button>
   </div>
@@ -74,7 +74,7 @@ import TechnologiesBar from "./TechnologiesBar.astro";
         aria-label="Demo link"
         class="flex justify-center items-center text-text dark:text-darkText hover:underline"
       >
-        <MonitorPlay class="w-100 h-100" />
+        <IconWrapper iconSet="lucide" iconName="monitor-play" classes="w-100 h-100"/>
       </a>
     </button>
   </div>

@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import SkillSection from "../components/SkillSection.astro";
 import ProjectCard from "../components/ProjectCard.astro";
-import { MoonStar, Sun, Linkedin, Github } from "lucide-astro";
+import IconWrapper from "../components/IconWrapper.astro";
 const allProjects = await Astro.glob("../pages/projects/*.mdx");
 const pageTitle = "WELCOME TO MY PORTFOLIO!";
 ---
@@ -41,11 +41,15 @@ const pageTitle = "WELCOME TO MY PORTFOLIO!";
       <div class="flex flex-row justify-evenly">
           <a
           href="https://pl.linkedin.com/in/wojciech-zgliniecki-1279a1166"
-          aria-label="My LinkedIn profile"><Linkedin /></a>
+          aria-label="My LinkedIn profile">
+            <IconWrapper iconSet="lucide" iconName="github" classes="w-100 h-100"/>
+          </a>
 
           <a
           href="https://github.com/wzgliniecki/"
-          aria-label="My LinkedIn profile"><Github /></a>
+          aria-label="My LinkedIn profile">
+          <IconWrapper iconSet="lucide" iconName="linkedin" classes="w-100 h-100"/>
+          </a>
       </div>
     </div>
   </div>

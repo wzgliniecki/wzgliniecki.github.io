@@ -1,5 +1,5 @@
 ---
-import { MoonStar, Sun } from "lucide-astro";
+import IconWrapper from "../components/IconWrapper.astro";
 const allProjects = await Astro.glob("../pages/projects/*.mdx");
 ---
 
@@ -82,7 +82,7 @@ const allProjects = await Astro.glob("../pages/projects/*.mdx");
     <div class="w-1/2 justify-end mr-5">
       <label class="grid cursor-pointer place-items-center">
         <div class="flex items-center">
-          <MoonStar class="ml-2" />
+          <IconWrapper iconSet="lucide" iconName="moon-star" classes="w-100 h-100"/>
           <input
             type="checkbox"
             value="light"
@@ -90,7 +90,7 @@ const allProjects = await Astro.glob("../pages/projects/*.mdx");
             aria-label="Toggle Theme"
             class="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1"
           />
-          <Sun class="mr-2" />
+          <IconWrapper iconSet="lucide" iconName="sun" classes="w-100 h-100"/>
         </div>
       </label>
     </div>
