@@ -3,7 +3,19 @@ import MainLayout from "../layouts/MainLayout.astro";
 import SkillSection from "../components/SkillSection.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import IconWrapper from "../components/IconWrapper.astro";
-const allProjects = await Astro.glob("../pages/projects/*.mdx");
+import type { MarkdownInstance } from 'astro';
+interface Frontmatter {
+    projectTitle: string;
+    technologiesList: string[];
+    mainRepo: string[];
+    additionalRepos: string[] | string;
+    demoLink: string;
+    projectLogo: string;
+    isPrivate: boolean;
+    description?: string;
+}
+const matches = Object.values(import.meta.glob<MarkdownInstance<Frontmatter>>("../pages/projects/*.mdx", { eager: true }));
+const allProjects = Object.values(matches);
 const pageTitle = "WELCOME TO MY PORTFOLIO!";
 ---
 
