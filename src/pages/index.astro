@@ -6,85 +6,116 @@ import IconWrapper from "../components/IconWrapper.astro";
 const allProjects = await Astro.glob("../pages/projects/*.mdx");
 const pageTitle = "WELCOME TO MY PORTFOLIO!";
 ---
+
 <MainLayout pageTitle={pageTitle}>
-  <div class="min-h-screen flex items-center justify-center snap-center" id="about">
+  <div
+    class="min-h-screen flex items-center justify-center snap-center"
+    id="about"
+  >
     <div class="flex flex-col text-center gap-y-20">
       <div>
-      <h1 class="text-6xl md:text-8xl font-extrabold bg-gradient-to-r from-blue-500 via-teal-500 to-pink-500 bg-clip-text text-transparent select-auto">
-        Wojciech<br>Zgliniecki
-      </h1>
+        <h1
+          class="text-6xl md:text-8xl font-extrabold bg-gradient-to-r from-blue-500 via-teal-500 to-pink-500 bg-clip-text text-transparent select-auto"
+        >
+          Wojciech<br />Zgliniecki
+        </h1>
       </div>
       <div class="justify-center items-center gap-4 hidden md:flex">
         <div class="mockup-code text-left">
           <pre data-prefix="$"><code>Software Developer</code></pre>
-          <pre data-prefix=">" class="text-warning"><code>Main Technologies: </code></pre>
-          <pre data-prefix=">" class="text-success"><code>["Python", "Django", "TS", "React"]</code></pre>
+          <pre
+            data-prefix=">"
+            class="text-warning"><code>Main Technologies: </code></pre>
+          <pre
+            data-prefix=">"
+            class="text-success"><code>["Python", "Django", "TS", "React"]</code></pre>
         </div>
         <div class="mockup-code text-left">
           <pre data-prefix="$"><code>Economist</code></pre>
-          <pre data-prefix=">" class="text-warning"><code>Gdańsk University of Technology</code></pre>
-          <pre data-prefix=">" class="text-success"><code>Faculty of Economics</code></pre>
+          <pre
+            data-prefix=">"
+            class="text-warning"><code>Gdańsk University of Technology</code></pre>
+          <pre
+            data-prefix=">"
+            class="text-success"><code>Faculty of Economics</code></pre>
         </div>
         <div class="mockup-code text-left">
           <pre data-prefix="$"><code>Control Engineer</code></pre>
-          <pre data-prefix=">" class="text-warning"><code>Gdańsk University of Technology</code></pre>
-          <pre data-prefix=">" class="text-success"><code>Faculty of Electronics</code></pre>
+          <pre
+            data-prefix=">"
+            class="text-warning"><code>Gdańsk University of Technology</code></pre>
+          <pre
+            data-prefix=">"
+            class="text-success"><code>Faculty of Electronics</code></pre>
         </div>
       </div>
-      
+
       <div class="mockup-code text-left flex flex-col md:hidden">
         <pre data-prefix="$"><code>Software Developer</code></pre>
         <pre data-prefix="$"><code>Control Engineer</code></pre>
         <pre data-prefix="$"><code>Economist</code></pre>
-      </div>      
+      </div>
 
       <div class="flex flex-row justify-evenly">
-          <a
+        <a
           href="https://pl.linkedin.com/in/wojciech-zgliniecki-1279a1166"
-          aria-label="My LinkedIn profile">
-            <IconWrapper iconSet="lucide" iconName="github" classes="w-100 h-100"/>
-          </a>
+          aria-label="My LinkedIn profile"
+        >
+          <IconWrapper
+            iconSet="lucide"
+            iconName="github"
+            classes="w-100 h-100"
+          />
+        </a>
 
-          <a
+        <a
           href="https://github.com/wzgliniecki/"
-          aria-label="My LinkedIn profile">
-          <IconWrapper iconSet="lucide" iconName="linkedin" classes="w-100 h-100"/>
-          </a>
+          aria-label="My LinkedIn profile"
+        >
+          <IconWrapper
+            iconSet="lucide"
+            iconName="linkedin"
+            classes="w-100 h-100"
+          />
+        </a>
       </div>
     </div>
   </div>
-  
 
-  <div class="min-h-screen flex items-center justify-center snap-center"  id="skills">
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 p-4">
-        <SkillSection stackPart={"language"} sectionTitle={"LANGUAGES"} />
-        <SkillSection stackPart={"backend"} sectionTitle={"BACKEND"} />
-        <SkillSection stackPart={"frontend"} sectionTitle={"FRONTEND"} />
-        <SkillSection stackPart={"other"} sectionTitle={"OTHER"} />
-      </div>
+  <div
+    class="min-h-screen flex items-center justify-center snap-center"
+    id="skills"
+  >
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+      <SkillSection stackPart={"language"} sectionTitle={"LANGUAGES"} />
+      <SkillSection stackPart={"backend"} sectionTitle={"BACKEND"} />
+      <SkillSection stackPart={"frontend"} sectionTitle={"FRONTEND"} />
+      <SkillSection stackPart={"other"} sectionTitle={"OTHER"} />
+    </div>
   </div>
   <div id="projects">
-  {
-    allProjects
-      .filter((project) => project.frontmatter.isPrivate === false)
-      .map((project) => {
-        return (
-        <div class="min-h-screen flex items-center justify-center snap-center" id={project.frontmatter.projectTitle}>
-            <div class="min-h-80">
-              <ProjectCard
-                projectTitle={project.frontmatter.projectTitle}
-                projectLogo={project.frontmatter.projectLogo}
-                featuresList={project.frontmatter.featuresList}
-                mainRepo={project.frontmatter.mainRepo}
-                demoLink={project.frontmatter.demoLink}
-                technologiesList={project.frontmatter.technologiesList}
-                projectDescription={project.frontmatter.description}
-                isWorkInProgress={project.frontmatter.isWorkInProgress}
-              />
+    {
+      allProjects
+        .filter((project) => project.frontmatter.isPrivate === false)
+        .map((project) => {
+          return (
+            <div
+              class="min-h-screen flex items-center justify-center snap-center"
+              id={project.frontmatter.projectTitle}
+            >
+              <div class="min-h-80">
+                <ProjectCard
+                  projectTitle={project.frontmatter.projectTitle}
+                  projectLogo={project.frontmatter.projectLogo}
+                  mainRepo={project.frontmatter.mainRepo}
+                  demoLink={project.frontmatter.demoLink}
+                  technologiesList={project.frontmatter.technologiesList}
+                  projectDescription={project.frontmatter.description}
+                />
+              </div>
             </div>
-          </div>
-        );
-      })
-  }
+          );
+        })
+    }
   </div>
 </MainLayout>

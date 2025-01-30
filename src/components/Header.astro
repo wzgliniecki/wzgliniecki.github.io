@@ -3,7 +3,9 @@ import IconWrapper from "../components/IconWrapper.astro";
 const allProjects = await Astro.glob("../pages/projects/*.mdx");
 ---
 
-<header class="w-full mx-auto mt-5 text-center fixed top-0 left-1/2 transform -translate-x-1/2 z-10">
+<header
+  class="w-full mx-auto mt-5 text-center fixed top-0 left-1/2 transform -translate-x-1/2 z-10"
+>
   <div class="navbar">
     <div class="navbar-start">
       <div class="dropdown">
@@ -19,8 +21,7 @@ const allProjects = await Astro.glob("../pages/projects/*.mdx");
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M4 6h16M4 12h8m-8 6h16"
-            />
+              d="M4 6h16M4 12h8m-8 6h16"></path>
           </svg>
         </div>
         <ul
@@ -36,11 +37,14 @@ const allProjects = await Astro.glob("../pages/projects/*.mdx");
                   .filter((project) => project.frontmatter.isPrivate === false)
                   .map((project) => {
                     return (
-                    <li>
-                      <a href={`#${project.frontmatter.projectTitle}`} aria-label={`${project.frontmatter.projectTitle}`}>
-                        {project.frontmatter.projectTitle}
-                      </a>
-                    </li>
+                      <li>
+                        <a
+                          href={`#${project.frontmatter.projectTitle}`}
+                          aria-label={`${project.frontmatter.projectTitle}`}
+                        >
+                          {project.frontmatter.projectTitle}
+                        </a>
+                      </li>
                     );
                   })
               }
@@ -49,29 +53,36 @@ const allProjects = await Astro.glob("../pages/projects/*.mdx");
         </ul>
       </div>
     </div>
-    
+
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
         <li><a href="#about" aria-label="About">ABOUT</a></li>
         <li><a href="#skills" aria-label="Skills">SKILLS</a></li>
         <li>
           <details class="group">
-            <summary class="cursor-pointer" aria-label="Projects">PROJECTS</summary>
+            <summary class="cursor-pointer" aria-label="Projects"
+              >PROJECTS</summary
+            >
             <ul class="p-2">
               <ul class="p-2">
-              {
-                allProjects
-                  .filter((project) => project.frontmatter.isPrivate === false)
-                  .map((project) => {
-                    return (
-                    <li>
-                      <a href={`#${project.frontmatter.projectTitle}`} aria-label={`${project.frontmatter.projectTitle}`}>
-                        {project.frontmatter.projectTitle}
-                      </a>
-                    </li>
-                    );
-                  })
-              }
+                {
+                  allProjects
+                    .filter(
+                      (project) => project.frontmatter.isPrivate === false,
+                    )
+                    .map((project) => {
+                      return (
+                        <li>
+                          <a
+                            href={`#${project.frontmatter.projectTitle}`}
+                            aria-label={`${project.frontmatter.projectTitle}`}
+                          >
+                            {project.frontmatter.projectTitle}
+                          </a>
+                        </li>
+                      );
+                    })
+                }
               </ul>
             </ul>
           </details>
@@ -82,7 +93,11 @@ const allProjects = await Astro.glob("../pages/projects/*.mdx");
     <div class="w-1/2 justify-end mr-5">
       <label class="grid cursor-pointer place-items-center">
         <div class="flex items-center">
-          <IconWrapper iconSet="lucide" iconName="moon-star" classes="w-100 h-100"/>
+          <IconWrapper
+            iconSet="lucide"
+            iconName="moon-star"
+            classes="w-100 h-100"
+          />
           <input
             type="checkbox"
             value="light"
@@ -90,13 +105,12 @@ const allProjects = await Astro.glob("../pages/projects/*.mdx");
             aria-label="Toggle Theme"
             class="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1"
           />
-          <IconWrapper iconSet="lucide" iconName="sun" classes="w-100 h-100"/>
+          <IconWrapper iconSet="lucide" iconName="sun" classes="w-100 h-100" />
         </div>
       </label>
     </div>
   </div>
 </header>
-
 
 <script is:inline>
   const setTheme = () => {

@@ -3,12 +3,9 @@ const {
   projectTitle,
   projectLogo,
   mainRepo,
-  featuresList,
   demoLink,
   technologiesList,
-  className,
   projectDescription,
-  isWorkInProgress
 } = Astro.props;
 import IconWrapper from "../components/IconWrapper.astro";
 import TechnologiesBar from "./TechnologiesBar.astro";
@@ -17,7 +14,9 @@ import TechnologiesBar from "./TechnologiesBar.astro";
 <div
   class={`grid min-h-80 max-h-90 w-full gap-4  p-2 grid-cols-4 grid-rows-4 rounded-lg`}
 >
-  <div class="col-span-2 row-span-2 lg:col-span-1 lg:row-span-4 rounded-lg shadow-md relative overflow-hidden p-5 bg-gray-200">
+  <div
+    class="col-span-2 row-span-2 lg:col-span-1 lg:row-span-4 rounded-lg shadow-md relative overflow-hidden p-5 bg-gray-200"
+  >
     <img
       loading="lazy"
       src={`/images/projects/logos/${projectLogo ?? "placeholder.svg"}`}
@@ -27,19 +26,19 @@ import TechnologiesBar from "./TechnologiesBar.astro";
   </div>
 
   <div
-  class="col-span-2 row-span-2 lg:col-span-3 lg:row-span-3 md:text-5xl rounded-lg shadow-md flex items-center justify-center bg-gray-200  text-gray-800 overflow-scroll"
->
-  {projectDescription}
-</div>
+    class="col-span-2 row-span-2 lg:col-span-3 lg:row-span-3 md:text-5xl rounded-lg shadow-md flex items-center justify-center bg-gray-200 text-gray-800 overflow-scroll"
+  >
+    {projectDescription}
+  </div>
 
   <div
-  class="col-span-4 row-span-1 lg:col-span-1 lg:row-span-1 rounded-lg shadow-md flex items-center flex-col justify-center"
+    class="col-span-4 row-span-1 lg:col-span-1 lg:row-span-1 rounded-lg shadow-md flex items-center flex-col justify-center"
   >
-  {
-    !!technologiesList && (
-      <TechnologiesBar technologiesList={technologiesList} />
-    )
-  }
+    {
+      !!technologiesList && (
+        <TechnologiesBar technologiesList={technologiesList} />
+      )
+    }
   </div>
 
   <div
@@ -55,11 +54,10 @@ import TechnologiesBar from "./TechnologiesBar.astro";
         aria-label="Github repository"
         class="flex justify-center items-center text-text dark:text-darkText hover:underline"
       >
-        <IconWrapper iconSet="lucide" iconName="github" classes="w-100 h-100"/>
+        <IconWrapper iconSet="lucide" iconName="github" classes="w-100 h-100" />
       </a>
     </button>
   </div>
-
 
   <div
     class="col-span-2 row-span-1 lg:col-span-1 lg:row-span-1 rounded-lg shadow-md flex items-center justify-center"
@@ -74,9 +72,12 @@ import TechnologiesBar from "./TechnologiesBar.astro";
         aria-label="Demo link"
         class="flex justify-center items-center text-text dark:text-darkText hover:underline"
       >
-        <IconWrapper iconSet="lucide" iconName="monitor-play" classes="w-100 h-100"/>
+        <IconWrapper
+          iconSet="lucide"
+          iconName="monitor-play"
+          classes="w-100 h-100"
+        />
       </a>
     </button>
   </div>
-
 </div>
