@@ -41,21 +41,21 @@ export const TECHNOLOGIES = [
     stackPart: "frontend",
     iconName: "vuedotjs",
   },
-  {
-    iconTitle: "Elixir",
-    stackPart: "language",
-    iconName: "elixir",
-  },
-  {
-    iconTitle: "C",
-    stackPart: "language",
-    iconName: "c",
-  },
-  {
-    iconTitle: "csharp",
-    stackPart: "language",
-    iconName: "csharp",
-  },
+  // {
+  //   iconTitle: "Elixir",
+  //   stackPart: "language",
+  //   iconName: "elixir",
+  // },
+  // {
+  //   iconTitle: "C",
+  //   stackPart: "language",
+  //   iconName: "c",
+  // },
+  // {
+  //   iconTitle: "csharp",
+  //   stackPart: "language",
+  //   iconName: "csharp",
+  // },
   {
     iconTitle: "Rust",
     stackPart: "language",
@@ -106,11 +106,11 @@ export const TECHNOLOGIES = [
     stackPart: "other",
     iconName: "expo",
   },
-  {
-    iconTitle: "Phoenix",
-    stackPart: "backend",
-    iconName: "phoenixframework",
-  },
+  // {
+  //   iconTitle: "Phoenix",
+  //   stackPart: "backend",
+  //   iconName: "phoenixframework",
+  // },
   {
     iconTitle: "RStudio",
     stackPart: "machineLearning",
@@ -121,11 +121,11 @@ export const TECHNOLOGIES = [
     stackPart: "machineLearning",
     iconName: "numpy",
   },
-  {
-    iconTitle: "Godot",
-    stackPart: "other",
-    iconName: "godotengine",
-  },
+  // {
+  //   iconTitle: "Godot",
+  //   stackPart: "other",
+  //   iconName: "godotengine",
+  // },
   {
     iconTitle: "Vite",
     stackPart: "frontend",
@@ -135,5 +135,30 @@ export const TECHNOLOGIES = [
     iconTitle: "DaisyUI",
     stackPart: "frontend",
     iconName: "daisyui",
+  },
+  {
+    iconTitle: "Android",
+    stackPart: "other",
+    iconName: "android",
+  },
+  {
+    iconTitle: "MongoDB",
+    stackPart: "other",
+    iconName: "mongodb",
+  },
+  {
+    iconTitle: "MUI",
+    stackPart: "frontend",
+    iconName: "mui",
+  },
+  {
+    iconTitle: "shadcn",
+    stackPart: "frontend",
+    iconName: "shadcnui",
+  },
+  {
+    iconTitle: "CPP",
+    stackPart: "language",
+    iconName: "cplusplus",
   },
 ];
