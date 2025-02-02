@@ -28,12 +28,12 @@ export const TECHNOLOGIES = [
   },
   {
     iconTitle: "Docker",
-    stackPart: "devOps",
+    stackPart: "other",
     iconName: "docker",
   },
   {
     iconTitle: "Kubernetes",
-    stackPart: "devOps",
+    stackPart: "other",
     iconName: "kubernetes",
   },
   {
@@ -83,7 +83,7 @@ export const TECHNOLOGIES = [
   },
   {
     iconTitle: "PyTorch",
-    stackPart: "machineLearning",
+    stackPart: "other",
     iconName: "pytorch",
   },
   {
@@ -98,7 +98,7 @@ export const TECHNOLOGIES = [
   },
   {
     iconTitle: "Polars",
-    stackPart: "machineLearning",
+    stackPart: "other",
     iconName: "polars",
   },
   {
@@ -113,12 +113,12 @@ export const TECHNOLOGIES = [
   // },
   {
     iconTitle: "RStudio",
-    stackPart: "machineLearning",
+    stackPart: "other",
     iconName: "rstudio",
   },
   {
     iconTitle: "NumPy",
-    stackPart: "machineLearning",
+    stackPart: "other",
     iconName: "numpy",
   },
   // {
