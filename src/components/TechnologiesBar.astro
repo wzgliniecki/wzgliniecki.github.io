@@ -13,6 +13,7 @@ import IconWrapper from "../components/IconWrapper.astro";
         ),
       )
       .map((technology) => (
+        <div class="tooltip" data-tip={technology.iconTitle}>
         <button
           type="button"
           class="flex items-center justify-center p-2 w-10 h-10"
@@ -22,6 +23,7 @@ import IconWrapper from "../components/IconWrapper.astro";
             classes={"w-6 h-6 text-text dark:text-darkText"}
           />
         </button>
+        </div>
       ))
   }
 </div>
