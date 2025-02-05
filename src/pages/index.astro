@@ -16,10 +16,9 @@ interface Frontmatter {
 }
 const matches = Object.values(import.meta.glob<MarkdownInstance<Frontmatter>>("../pages/projects/*.mdx", { eager: true }));
 const allProjects = Object.values(matches);
-const pageTitle = "WELCOME TO MY PORTFOLIO!";
 ---
 
-<MainLayout pageTitle={pageTitle}>
+<MainLayout>
   <div
     class="min-h-screen flex items-center justify-center snap-center"
     id="about"
