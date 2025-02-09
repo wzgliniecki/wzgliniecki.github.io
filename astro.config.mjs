@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 
 import sitemap from "@astrojs/sitemap";
 
@@ -11,5 +11,8 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   site: "https://wzgliniecki.github.io",
-  integrations: [tailwind(), sitemap(), icon(), mdx()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  integrations: [sitemap(), icon(), mdx()],
 });
