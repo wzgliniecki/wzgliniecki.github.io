@@ -36,11 +36,11 @@ export const TECHNOLOGIES = [
     stackPart: "other",
     iconName: "kubernetes",
   },
-  {
-    iconTitle: "Vue",
-    stackPart: "frontend",
-    iconName: "vuedotjs",
-  },
+  // {
+  //   iconTitle: "Vue",
+  //   stackPart: "frontend",
+  //   iconName: "vuedotjs",
+  // },
   // {
   //   iconTitle: "Elixir",
   //   stackPart: "language",
@@ -76,11 +76,11 @@ export const TECHNOLOGIES = [
     stackPart: "frontend",
     iconName: "tailwindcss",
   },
-  {
-    iconTitle: "Nuxt",
-    stackPart: "frontend",
-    iconName: "nuxtdotjs",
-  },
+  // {
+  //   iconTitle: "Nuxt",
+  //   stackPart: "frontend",
+  //   iconName: "nuxtdotjs",
+  // },
   {
     iconTitle: "PyTorch",
     stackPart: "other",
@@ -141,11 +141,11 @@ export const TECHNOLOGIES = [
     stackPart: "other",
     iconName: "android",
   },
-  {
-    iconTitle: "MongoDB",
-    stackPart: "other",
-    iconName: "mongodb",
-  },
+  // {
+  //   iconTitle: "MongoDB",
+  //   stackPart: "other",
+  //   iconName: "mongodb",
+  // },
   {
     iconTitle: "MUI",
     stackPart: "frontend",
