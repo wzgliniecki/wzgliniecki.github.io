@@ -103,26 +103,25 @@ const allProjects = Object.values(matches);
     </div>
 
     <div class="w-1/2 justify-end mr-5">
-      <label class="grid cursor-pointer place-items-center">
-        <div class="flex items-center">
-          <IconWrapper
-            iconSet="lucide"
-            iconName="moon-star"
-            classes="w-10 h-10"
-          />
-          <input
-            type="checkbox"
-            value="light"
-            id="theme-selector"
-            aria-label="Toggle Theme"
-            class="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1"
-          />
-          <IconWrapper iconSet="lucide" iconName="sun" classes="w-10 h-10" />
-        </div>
+      <label class="swap swap-rotate">
+        <input type="checkbox" class="theme-controller" value="light" />
+
+        <IconWrapper
+          iconSet="lucide"
+          iconName="sun"
+          classes="swap-off w-8 h-8 fill-current"
+        />
+
+        <IconWrapper
+          iconSet="lucide"
+          iconName="moon-star"
+          classes="swap-on w-8 h-8 fill-current"
+        />
       </label>
     </div>
   </div>
 </header>
+
 
 <script is:inline>
   const setTheme = () => {
