@@ -86,11 +86,11 @@ export const TECHNOLOGIES = [
     stackPart: "other",
     iconName: "pytorch",
   },
-  {
-    iconTitle: "Remix",
-    stackPart: "frontend",
-    iconName: "remix",
-  },
+  // {
+  //   iconTitle: "Remix",
+  //   stackPart: "frontend",
+  //   iconName: "remix",
+  // },
   {
     iconTitle: "PostgreSQL",
     stackPart: "other",
