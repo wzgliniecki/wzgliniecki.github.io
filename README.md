@@ -1,1 +1,1 @@
-My personal portfolio based on Astro Starter Kit: Minimal.
+My personal portfolio written with Astro/Tailwind/DaisyUI.
