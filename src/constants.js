@@ -36,11 +36,16 @@ export const TECHNOLOGIES = [
     stackPart: "other",
     iconName: "kubernetes",
   },
-  // {
-  //   iconTitle: "Vue",
-  //   stackPart: "frontend",
-  //   iconName: "vuedotjs",
-  // },
+  {
+    iconTitle: "Vue",
+    stackPart: "frontend",
+    iconName: "vuedotjs",
+  },
+  {
+    iconTitle: "Bun",
+    stackPart: "backend",
+    iconName: "bun",
+  },
   // {
   //   iconTitle: "Elixir",
   //   stackPart: "language",
@@ -141,11 +146,11 @@ export const TECHNOLOGIES = [
     stackPart: "other",
     iconName: "android",
   },
-  // {
-  //   iconTitle: "MongoDB",
-  //   stackPart: "other",
-  //   iconName: "mongodb",
-  // },
+  {
+    iconTitle: "MongoDB",
+    stackPart: "other",
+    iconName: "mongodb",
+  },
   {
     iconTitle: "MUI",
     stackPart: "frontend",
