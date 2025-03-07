@@ -1,17 +1,21 @@
 ---
 import IconWrapper from "../components/IconWrapper.astro";
-import type { MarkdownInstance } from 'astro';
+import type { MarkdownInstance } from "astro";
 interface Frontmatter {
-    projectTitle: string;
-    technologiesList: string[];
-    mainRepo: string[];
-    additionalRepos: string[] | string;
-    demoLink: string;
-    projectLogo: string;
-    isPrivate: boolean;
-    description?: string;
+  projectTitle: string;
+  technologiesList: string[];
+  mainRepo: string[];
+  additionalRepos: string[] | string;
+  demoLink: string;
+  projectLogo: string;
+  isPrivate: boolean;
+  description?: string;
 }
-const matches = Object.values(import.meta.glob<MarkdownInstance<Frontmatter>>("../pages/projects/*.mdx", { eager: true }));
+const matches = Object.values(
+  import.meta.glob<MarkdownInstance<Frontmatter>>("../pages/projects/*.mdx", {
+    eager: true,
+  }),
+);
 const allProjects = Object.values(matches);
 ---
 
@@ -121,7 +125,6 @@ const allProjects = Object.values(matches);
     </div>
   </div>
 </header>
-
 
 <script is:inline>
   const setTheme = () => {

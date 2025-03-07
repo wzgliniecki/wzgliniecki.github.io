@@ -12,25 +12,32 @@ import TechnologiesBar from "./TechnologiesBar.astro";
 ---
 
 <div
-  class={`grid min-h-80 max-h-90 w-full gap-4  p-2 grid-cols-4 grid-rows-4 rounded-lg`}
+  class="grid min-h-80 max-h-90 w-full gap-4 p-2 grid-cols-4 grid-rows-4 rounded-lg"
 >
   <div
-    class="col-span-2 row-span-2 lg:col-span-1 lg:row-span-4 rounded-lg relative overflow-hidden p-5 bg-gray-200"
+    class="col-span-2 row-span-2 lg:col-span-1 lg:row-span-4 rounded-lg relative overflow-hidden p-5 bg-gray-200 flex items-center justify-center"
   >
-    <img
-      loading="lazy"
-      src={`/images/projects/logos/${projectLogo ?? "placeholder.svg"}`}
-      alt={projectTitle}
-      class="w-full h-full object-contain rounded-lg"
-    />
+    {
+      projectLogo ? (
+        <img
+          loading="lazy"
+          src={`/images/projects/logos/${projectLogo}`}
+          alt={projectTitle}
+          class="w-full h-full object-contain rounded-lg"
+        />
+      ) : (
+        <span class="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-700">
+          {projectTitle}
+        </span>
+      )
+    }
   </div>
 
   <div
-  class="col-span-2 row-span-2 lg:col-span-3 lg:row-span-3 md:text-xl lg:text-2xl xl:text-3xl rounded-lg flex items-center justify-center bg-gray-200 text-gray-800 overflow-scroll p-4"
->
-  {projectDescription}
-</div>
-
+    class="col-span-2 row-span-2 lg:col-span-3 lg:row-span-3 md:text-xl lg:text-2xl xl:text-3xl rounded-lg flex items-center justify-center bg-gray-200 text-gray-800 overflow-scroll p-4"
+  >
+    {projectDescription}
+  </div>
 
   <div
     class="col-span-4 row-span-1 lg:col-span-1 lg:row-span-1 rounded-lg flex items-center flex-col justify-center"
